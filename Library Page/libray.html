@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Raleway&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!--Filter-->
+    <div class="container-fluid" style="border-bottom:3px solid white ;">
+        <div id="row-filter">
+            <div class="col-sm-8 title"> <h1>Movie Library</h1></div>
+
+            <div class="col-sm-1 filter-button" data-filter="all"> <button id="button">All</button></div>
+            <div class="col-sm-1 filter-button" data-filter="comedy"> <button id="button">Genre</button></div>
+            <div class="col-sm-1 filter-button" data-filter="horror"> <button id="button">Year</button></div>
+            <div class="col-sm-1 filter-button" data-filter="romance"> <button id="button">Imdb Score</button></div>
+        </div>
+    </div>
+
+    <!--Movie list-->
+    <div class="container-fluid">
+        <!--Contains rows-->
+
+        <div id="row-movies"> <!-- Contains 4 movie cards-->
+            <div class="col-sm-3 mc">
+                <div class="movie-card1"> 
+                    <div class="movie-buttons1">
+                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
+                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-sm-3 mc">
+                <div class="movie-card2"> 
+                    <div class="movie-buttons2">
+                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
+                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 mc">
+                <div class="movie-card3"> 
+                    <div class="movie-buttons3">
+                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
+                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-sm-3 mc">
+                <div class="movie-card4"> 
+                    <div class="movie-buttons4">
+                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
+                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
+                    </div>
+                 </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+</html>

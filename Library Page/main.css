@@ -1,0 +1,147 @@
+*{
+    background-color: #141414;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    /* font-family: 'Raleway', sans-serif; */
+
+}
+
+#row-filter{
+   margin-top: 20px; 
+}
+
+#button{
+    background: none;
+    font-size: 18px;
+}
+
+#row-movies{
+    margin-top: 35px;
+    margin-left: 75px;
+}
+
+.mc {
+    align-content: center;
+}
+
+h1{
+    font-size: 25px;
+    
+}
+
+button{
+    font-size: 15px;
+    border: none;
+    background-color: white;
+    height: 20px;
+    margin-top: 20px;
+}
+
+
+.play{
+    float:left;
+border: none;
+border-radius: 5px;
+}
+.heart{
+    float: right;
+    border: none;
+border-radius: 5px;
+}
+
+.movie-card1 {
+  height: 400px;
+  width: 300px;
+  background-image: url("poster.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 10px 5px black;
+}
+
+.movie-card2 {
+    height: 400px;
+    width: 300px;
+    background-image: url("https://images.fathomevents.com/image/upload/w_360,dpr_1.5,f_auto,q_auto/fl_attachment/v1626129611/Events/2021/1551/Coraline_1000x1480.jpg.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 10px 5px black;
+  
+}
+
+.movie-card3 {
+    height: 400px;
+    width: 300px;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 10px 5px black;
+  
+}
+
+.movie-card4 {
+    height: 400px;
+    width: 300px;
+    background-image: url("http://www.limitedruns.com/media/cache/8c/40/8c4049deba364f4f72f521022866f472.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 10px 5px black;
+  
+}
+  
+
+.movie-buttons1 {
+ width: 300px;
+ height: 85px;
+ background-color: rgba(0,0,0,0.5);
+ position: absolute;
+ bottom: 0;
+ border-radius: 5px;
+ display: none;
+}
+
+.movie-buttons2 {
+    width: 300px;
+    height: 85px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.movie-buttons3 {
+    width: 300px;
+    height: 85px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.movie-buttons4 {
+    width: 300px;
+    height: 85px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    display: none;
+}
+
+#play-icon {
+    background: none;
+    margin-left: 20px;
+}
+
+#heart-icon {
+    background: none;
+    margin-left: 5px;
+}
+
+
+
