@@ -493,22 +493,22 @@ body {
 
 /*-------------------------------------Detailed Page CSS (Enrique) START*/
 
+.detailed-body{
+  background-color: #141414;
+}
+
 .detailed-topRow{
     margin-top: 20px;
 }
 
 .detailed-artwork{
     height: 225px;
-    background-color: grey;
-    text-align: center;
-    border: 3px solid black;
+    width: 150px;
 }
 
 .detailed-trailer{
     height: 225px;
-    background-color: grey;
     text-align: center;
-    border: 3px solid black;
 }
 
 .detailed-bottomRow{
@@ -519,6 +519,11 @@ body {
 .detailed-button{
     float: right;
     margin-right: 80px;
+}
+
+.detailed-movieName, .detailed-director, .detailed-actors, .detailed-synopsis{
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 /*-------------------------------------Detailed Page CSS (Enrique) END*/
 
