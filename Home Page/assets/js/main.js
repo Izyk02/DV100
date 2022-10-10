@@ -2,7 +2,7 @@
   "use strict";
 
   /**
-   * Easy selector helper function
+   * Easy selector helper function //Erik was here
    */
   const select = (el, all = false) => {
     el = el.trim()
