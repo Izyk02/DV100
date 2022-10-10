@@ -408,7 +408,7 @@ section {
 .btn-default {
 background-color: #7478F3;
 color:#FFF;
-border-color: #FFFFFF;
+border-color: #FFFFFF; 
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
@@ -554,16 +554,6 @@ h1{
   font-size: 25px;
   
 }
-
-button{
-  font-size: 15px;
-  border: none;
-  background-color: white;
-  height: 20px;
-  margin-top: 20px;
-}
-
-
 .play{
   float:left;
 border: none;
