@@ -24,7 +24,67 @@
 </head>
 
 <body>
+<!--Navbar-->
 
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+  <a href="#" class="navbar-brand mb-0 h1">
+  <img class="" src="assets/logo/Logo-no_bg.png"  width="50px" height="50px">CINEMO
+  </a>
+  <button class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      class="navbar-toggler"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+
+   <!--Link pages here-->
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+              <a href="index.html" class="nav-link active">
+                  Home
+              </a>
+          </li>
+          <li class="nav-item active">
+              <a href="assets/pages/libray.html" class="nav-link">
+                  Movie Library
+              </a>
+          </li>
+          <li class="nav-item active">
+              <a href="assets/pages/watchlist.html" class="nav-link">
+                  My Watchlist
+              </a>
+          </li>
+          <!--Dropdown for sign in and login pages-->
+          <li class="nav-item dropdown"> 
+              <a href="assets/pages/signIn.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+              </a>
+              <ul class="dropdown-menu"
+              aria-labelledby="navbarDropdown">
+              <li>
+                  <a href="#" class="dropdown-item">Login</a>
+              </li>
+              <li>
+                  <a href="#" class="dropdown-item">Sign-in</a>
+              </li>
+              </ul>
+          </li>
+      </ul>
+      <form class="d-flex">
+          <input type="text" class="form-control me-2">
+          <button type="submit" class="btn btn-default">Search</button>
+      </form>
+  </div>
+</div>
+</nav>
+<!--End of navbar-->
    <!-- Hero Section  -->
    <section id="hero" class="hero d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
@@ -237,6 +297,36 @@
     </section><!-- End Featured Movies Section -->
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow'></i></a>
+
+
+  <!--FOOTER SECTION-->
+  <section class="footer">
+    <div class="social">
+        <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+        <a href="https://accounts.snapchat.com/accounts/login?client_id=geo"><i class="fab fa-snapchat"></i></a>
+        <a href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <ul class="list">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Terms</a>
+        </li>
+        <li>
+            <a href="#">Privacy Policy</a>
+        </li>
+    </ul>
+    <p class="copyright">Copyright CINEMO©2022</p>
+</section>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
