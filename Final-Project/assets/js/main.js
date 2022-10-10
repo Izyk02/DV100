@@ -1,6 +1,58 @@
 (function() {
   "use strict";
 
+
+
+
+
+
+
+
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://imdb8.p.rapidapi.com/title/get-full-credits?tconst=tt1745960",
+    "method": "GET",
+    "headers": {
+      "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
+      "X-RapidAPI-Host": "imdb8.p.rapidapi.com"
+    }
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+      //$("#director").text("Director "+response.crew.director[0].name);
+      //$("#H-movieName1").text("Name "+response.base.title); 
+  
+      var temp = "";
+      for( let i = 0; i <4; i++){
+           temp +=response.cast[i].name; 
+  
+      }
+    //$("#listOfActors").text("Actors "+temp); 
+   $("#H-movieImg1").append("<img class='H-movie-img' src="+response.base.image.url+" alt=''>"); 
+   // $("#year").text("Year: "+response.base.year);
+   // $("#time").text("Run Time: "+response.base.runningTimeInMinutes +"min");
+  });
+  
+  
+
+  
+  // This code gets the details for a specified movie, enter the movie code you will get when searching the API's database eg.tt1745960
+  //this is the code for Top Gun Maverick.
+  // in the url replace "const=(movie code starting with tt)"
+  
+
+
+
+
+
+
+
+
+
+
+
   /**
    * Easy selector helper function //Erik was here
    */
@@ -278,3 +330,44 @@
   new PureCounter();
 
 })()
+
+/*
+function loadHomeContent(){
+
+  
+    const settings = {
+     "async": true,
+     "crossDomain": true,
+     "url": "https://imdb8.p.rapidapi.com/title/get-full-credits?tconst=tt1745960",
+     "method": "GET",
+     "headers": {
+       "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
+       "X-RapidAPI-Host": "imdb8.p.rapidapi.com"
+     }
+   };
+   
+   $.ajax(settings).done(function (response) {
+     console.log(response);
+       $("#director").text("Director "+response.crew.director[0].name);
+       $("#H-movieName1").text("Name "+response.base.title); 
+   
+       var temp = "";
+       for( let i = 0; i <4; i++){
+            temp +=response.cast[i].name; 
+   
+       }
+     $("#listOfActors").text("Actors "+temp); 
+    $("#H-movieImg1").append("<img src="+response.base.image.url+" alt=''>"); 
+     $("#year").text("Year: "+response.base.year);
+     $("#time").text("Run Time: "+response.base.runningTimeInMinutes +"min");
+   });
+   
+   
+
+   
+   // This code gets the details for a specified movie, enter the movie code you will get when searching the API's database eg.tt1745960
+   //this is the code for Top Gun Maverick.
+   // in the url replace "const=(movie code starting with tt)"
+   
+}
+*/

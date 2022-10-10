@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <script src="assets\js\main.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>Movie Website</title>
  
   <!-- Favicons -->
@@ -23,7 +24,7 @@
 
 </head>
 
-<body>
+<body >
 <!--Navbar-->
 
 
@@ -63,7 +64,7 @@
           </li>
           <!--Dropdown for sign in and login pages-->
           <li class="nav-item dropdown"> 
-              <a href="assets/pages/signIn.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Account
               </a>
               <ul class="dropdown-menu"
@@ -72,7 +73,7 @@
                   <a href="SignIn_Page.html" class="dropdown-item">Login</a>
               </li>
               <li>
-                  <a href="#" class="dropdown-item">Sign-in</a>
+                  <a href="SignIn_Page.html" class="dropdown-item">Sign-in</a>
               </li>
               </ul>
           </li>
@@ -158,8 +159,8 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up">
-              <div class="movie-img"><img src="" alt=""></div>
-              <h4 class="title"><a href="Detailed_Page.html">Top Gun: Maverick</a></h4>
+              <div  id="H-movieImg1"></div>
+              <h4 class="title" id="H-movieName1"><a href="Detailed_Page.html">Top Gun: Maverick</a></h4>
               <div>
                 <div class="btn-get-started">
                   <a href="#">
