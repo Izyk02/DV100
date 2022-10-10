@@ -393,7 +393,7 @@ section {
   opacity: 1;
 }
 
-/*-----------------------Emily CSS Footer and Header*/
+/*-------------------------------------Header and Footer CSS (Emily) START*/
 
 /*NAVBAR Styling */
 .navbar .navbar-nav .nav-link {
@@ -489,8 +489,9 @@ body {
 
 
 
-/*-----------------------Emily CSS Footer and Header*/
-/*-----------------------Enrique CSS Detailed*/
+/*-------------------------------------Header and Footer CSS (Emily) END*/
+
+/*-------------------------------------Detailed Page CSS (Enrique) START*/
 
 .detailed-topRow{
     margin-top: 20px;
@@ -519,9 +520,9 @@ body {
     float: right;
     margin-right: 80px;
 }
-/*-----------------------Enrique CSS Detailed*/
+/*-------------------------------------Detailed Page CSS (Enrique) END*/
 
-/*-----------------------Skyler Erik CSS Library*/
+/*-------------------------------------Library Page CSS (Erik & Skyler) START*/
 /*
 {
   background-color: #000000;
@@ -670,9 +671,9 @@ display: none;
 
 
 
-/*-----------------------Skyler Erik CSS Library end*/
+/*-------------------------------------Library Page CSS (Erik & Skyler) END*/
 
-/*-----------------------antonio CSS signin and up start*/
+/*-------------------------------------Sign In and Up Page CSS (Antonio) START*/
 .signIn-Updiv{
   background-color: rgb(255, 255, 255);
   border: solid 2px black;
@@ -716,4 +717,4 @@ margin-left: 17px;
 .signIn-titles{
   margin-left: 35px;
 }
-/*-----------------------antonio CSS signin and up end*/
+/*-------------------------------------Sign In and Up Page CSS (Antonio) END*/
