@@ -545,6 +545,99 @@ body {
 
 }*/
 
+/*-------------------------------------Filter Dropdown Menu CSS START*/
+
+.filter-dropdown {
+position: relative;
+}
+
+/*
+.dropdown {
+  min-width: 15em;
+  position: relative;
+  margin: 2em;
+}
+*/
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+background: #2a2f3b;
+color: #FFF;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 2px #2a2f3b solid ;
+border-radius: 0.5em;
+padding: 1em;
+cursor: pointer;
+transition:0.3s;
+}
+
+.select.clicked {
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #FFF;
+  transition: 0.3s;
+}
+
+.select.hover {
+background: #323741;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #323741;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 4em;
+  left: 50%;
+  width: 135px;
+  transform: translateX(-50%);
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: #2a2d35;
+}
+
+.active {
+  background: #23242a;
+}
+
+.menu-open {
+  display :block ;
+  opacity: 1;
+}
+
+/*-------------------------------------Filter Dropdown Menu CSS END*/
+
+
 #row-filter{
  margin-top: 20px; 
 }
@@ -596,11 +689,13 @@ border-radius: 5px;
 .movie-card1 {
 height: 400px;
 width: 300px;
-background-image: url("poster.jpg");
+background-image: url("https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg");
 background-size: cover;
 border-radius: 5px;
 position: relative;
 box-shadow: 0 0 10px 5px black;
+float: none;
+margin: 0;
 }
 
 .movie-card2 {
@@ -611,7 +706,8 @@ box-shadow: 0 0 10px 5px black;
   border-radius: 5px;
   position: relative;
   box-shadow: 0 0 10px 5px black;
-
+  float: none;
+  margin: 0;
 }
 
 .movie-card3 {
@@ -622,7 +718,8 @@ box-shadow: 0 0 10px 5px black;
   border-radius: 5px;
   position: relative;
   box-shadow: 0 0 10px 5px black;
-
+  float: none;
+  margin: 0;
 }
 
 .movie-card4 {
@@ -633,9 +730,33 @@ box-shadow: 0 0 10px 5px black;
   border-radius: 5px;
   position: relative;
   box-shadow: 0 0 10px 5px black;
-
+  float: none;
+  margin: 0;
 }
 
+.movie-card5 {
+  height: 400px;
+  width: 300px;
+  background-image: url("http://www.limitedruns.com/media/cache/8c/40/8c4049deba364f4f72f521022866f472.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 10px 5px black;
+  float: none;
+  margin: 0;
+}
+
+.movie-card6 {
+  height: 400px;
+  width: 300px;
+  background-image: url("http://www.limitedruns.com/media/cache/8c/40/8c4049deba364f4f72f521022866f472.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 10px 5px black;
+  float: none;
+  margin: 0;
+}
 
 .movie-buttons1 {
 width: 300px;
@@ -668,6 +789,26 @@ display: none;
 }
 
 .movie-buttons4 {
+  width: 300px;
+  height: 85px;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px;
+  display: none;
+}
+
+.movie-buttons5 {
+  width: 300px;
+  height: 85px;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px;
+  display: none;
+}
+
+.movie-buttons6 {
   width: 300px;
   height: 85px;
   background-color: rgba(0,0,0,0.5);
