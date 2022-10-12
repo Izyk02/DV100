@@ -661,18 +661,19 @@ h1{
   
 }
 
-/*
-{
 
-button{
+
+
+#icon-button{
   font-size: 15px;
   border: none;
-  background-color: white;
+  background-color: #106eea;
   height: 20px;
   margin-top: 20px;
 }
 
-*/
+
+
 
 
 .play{
@@ -686,16 +687,24 @@ border-radius: 5px;
 border-radius: 5px;
 }
 
-.movie-card1 {
-height: 400px;
-width: 300px;
-background-image: url("https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg");
+.movie-card {
+
 background-size: cover;
 border-radius: 5px;
 position: relative;
 box-shadow: 0 0 10px 5px black;
 float: none;
 margin: 0;
+}
+
+.card-body{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-footer{
+  background-color: #106eea;
+  bottom: 0;
 }
 
 .movie-card2 {
