@@ -17,10 +17,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -147,161 +148,139 @@
 
     <!--Movie List-->
 
-    <div class="container-fluid">
-
-        <div class="row" id="row-movies">
-
-            <div class="col-md-1"></div>
-            <!--Movie 1-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
+    <br>
+    <br>
+    <!--Movie List and container-->
+    <div class="container library_page ">
+        <!--adds external gutter-->
+        <div class="row row-cols-1 row-cols-md-5 g-4 g-md-5">
+            <!--row-cols-1 laying out the cards on one column, and .row-cols-md-5 splitting  cards to equal width across multiple rows, from the medium breakpoint up-->
+            <!--g-3 and g-md-4 create spaces between columns - gutter-->
+           
+            <!--Movie card1-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/51t0TPMP8zL.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
-                    </div>
-                   <div class="card-footer" > <!--
-                        <button id="icon-button"><img id="play-hover"
-                                src="assets/icons/play-circle.svg"
-                                style="height:50px ; width: 50px; margin-top: -5px; background: none; "></button>
-                        <button id="icon-button"><img id="heart-hover" src="assets/icons/heart.svg"
-                                style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                       -->
-                    </div>
-                </div>
-            </div>
-            <!--Movie 2-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
-                    <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
-                    </div>
-                    <div class="card-footer">
-                    </div>
-                </div>
-            </div>
-            <!--Movie 3-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
-                    <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
-                    </div>
-                    <div class="card-footer">
-                    </div>
-                </div>
-            </div>
-            <!--Movie 4-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
-                    <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
-                    </div>
-                    <div class="card-footer">
-                    </div>
-                </div>
-            </div>
-            <!--Movie 5-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
-                    <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
-                    </div>
-                    <div class="card-footer">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-
-            <!--Movie 6-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
+            <!--Movie card2-->
+            <div class="col">
+                <div class="movie-card">
+                    <img src="assets/img/Movie-Posters/71x1RHSaEhL._AC_SL1000_.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
-                    </div>
-                    <div class="card-footer">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
                     </div>
                 </div>
             </div>
 
-            <!--Movie 7-->
-            <div class="col-md-2 ">
-                <div class="movie-card" style="border-radius: 5px;">
+            <!--Movie card3-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/111f028a5306b64d7c0374e42991bfb1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
-                            style="height: 100%; width: 100%;" alt="">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
                     </div>
-                    <div class="card-footer">
+                </div>
+            </div>
+
+            <!--Movie card4-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/Avengers_-_End_Game_800x.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Movie card5-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/brand-name-movie-posters-lance-ford-16-5e8b09fa00907__700.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Movie card6-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/images.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Movie card7-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/movie-poster-template-design-21a1c803fe4ff4b858de24f5c91ec57f_screen.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Movie card8-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/parasite2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Movie card9-->
+            <div class="col">
+                <div class="movie-card ">
+                    <img src="assets/img/Movie-Posters/star-is-born-web.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Movie card10-->
+            <div class="col">
+                <div class="movie-card">
+                    <img src="assets/img/Movie-Posters/Top Gun Maverick.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
+                        <a href="#" class="btn btn-primary">Play</a>
+                        <a href="#" class="btn btn-primary">Add</a>
                     </div>
                 </div>
             </div>
 
         </div>
-
     </div>
-
-
-    <!--
-    Movie list 
-    <div class="container-fluid" style="align-items: center; justify-content: center;">
-        Contains rows 
-        <div class="row" id="row-movies">  Contains 4 movie cards 
-            <div class="col-sm-2 mc">
-                <div class="movie-card1"> 
-                    <div class="movie-buttons1">
-                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
-                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-sm-2 mc">
-                <div class="movie-card2"> 
-                    <div class="movie-buttons2">
-                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
-                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2 mc">
-                <div class="movie-card3"> 
-                    <div class="movie-buttons3">
-                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
-                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-sm-2 mc">
-                <div class="movie-card4"> 
-                    <div class="movie-buttons4">
-                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
-                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-sm-2 mc">
-                <div class="movie-card5"> 
-                    <div class="movie-buttons5">
-                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
-                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-sm-2 mc">
-                <div class="movie-card6"> 
-                    <div class="movie-buttons5">
-                      <button id="play-icon"><img id="play-hover" src="Icons\play-circle.svg" style="height:50px ; width: 50px; margin-top: -5px; background: none;"></button>
-                      <button id="heart-icon"><img id="heart-hover" src="Icons\heart.svg" style="height:40px ; width: 40px; margin-top: -5px; background: none;"></button>
-                    </div>
-                 </div>
-            </div>
-        </div>
-    </div>
-    -->
+ <br>
+ <br>
 
     <!--FOOTER SECTION-->
     <section class="footer">

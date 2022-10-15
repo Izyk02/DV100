@@ -637,206 +637,58 @@ background: #323741;
 }
 
 /*-------------------------------------Filter Dropdown Menu CSS END*/
-
+/*-------------------------------------Movie List*/
 
 #row-filter{
  margin-top: 20px; 
 }
 
-#button{
-  background: none;
-  font-size: 18px;
+body{
+  background-color: #141414;
 }
 
-#row-movies{
-  margin-top: 35px;
-  margin-left: 0px;
+.card-title{
+  color: white;
+font-family: "Roboto", sans-serif;
 }
 
-.mc {
-  align-content: center;
-}
-
-h1{
-  font-size: 25px;
-  
-}
-
-
-
-
-#icon-button{
-  font-size: 15px;
-  border: none;
-  background-color: #106eea;
-  height: 20px;
-  margin-top: 20px;
-}
-
-
-
-
-
-.play{
-  float:left;
-border: none;
-border-radius: 5px;
-}
-.heart{
-  float: right;
-  border: none;
-border-radius: 5px;
-}
-
-.movie-card {
-
-background-size: cover;
-border-radius: 5px;
-position: relative;
-box-shadow: 0 0 10px 5px black;
-float: none;
-margin: 0;
+.card-img-top{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .card-body{
-  width: 100%;
-  margin-bottom: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #141414;
+  bottom: auto;
+  
 }
-
-.card-footer{
-  background-color: #106eea;
-  bottom: 0;
-}
-
-.movie-card2 {
-  height: 400px;
-  width: 300px;
-  background-image: url("https://images.fathomevents.com/image/upload/w_360,dpr_1.5,f_auto,q_auto/fl_attachment/v1626129611/Events/2021/1551/Coraline_1000x1480.jpg.jpg");
-  background-size: cover;
+.movie-card{
   border-radius: 5px;
-  position: relative;
-  box-shadow: 0 0 10px 5px black;
-  float: none;
-  margin: 0;
+  box-shadow: 0 0 10px 1px #34f8ff;
+  
 }
 
-.movie-card3 {
-  height: 400px;
-  width: 300px;
-  background-image: url("https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg");
-  background-size: cover;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0 0 10px 5px black;
-  float: none;
-  margin: 0;
+.btn-primary{
+  height: 35px;
+  color: white;
+font-family: "Roboto", sans-serif;
+background-color: #7478f3;
+border: none;
 }
 
-.movie-card4 {
-  height: 400px;
-  width: 300px;
-  background-image: url("http://www.limitedruns.com/media/cache/8c/40/8c4049deba364f4f72f521022866f472.jpg");
-  background-size: cover;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0 0 10px 5px black;
-  float: none;
-  margin: 0;
-}
 
-.movie-card5 {
-  height: 400px;
-  width: 300px;
-  background-image: url("http://www.limitedruns.com/media/cache/8c/40/8c4049deba364f4f72f521022866f472.jpg");
-  background-size: cover;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0 0 10px 5px black;
-  float: none;
-  margin: 0;
-}
 
-.movie-card6 {
-  height: 400px;
-  width: 300px;
-  background-image: url("http://www.limitedruns.com/media/cache/8c/40/8c4049deba364f4f72f521022866f472.jpg");
-  background-size: cover;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0 0 10px 5px black;
-  float: none;
-  margin: 0;
-}
 
-.movie-buttons1 {
-width: 300px;
-height: 85px;
-background-color: rgba(0,0,0,0.5);
-position: absolute;
-bottom: 0;
-border-radius: 5px;
-display: none;
-}
 
-.movie-buttons2 {
-  width: 300px;
-  height: 85px;
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  bottom: 0;
-  border-radius: 5px;
-  display: none;
-}
 
-.movie-buttons3 {
-  width: 300px;
-  height: 85px;
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  bottom: 0;
-  border-radius: 5px;
-  display: none;
-}
 
-.movie-buttons4 {
-  width: 300px;
-  height: 85px;
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  bottom: 0;
-  border-radius: 5px;
-  display: none;
-}
 
-.movie-buttons5 {
-  width: 300px;
-  height: 85px;
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  bottom: 0;
-  border-radius: 5px;
-  display: none;
-}
 
-.movie-buttons6 {
-  width: 300px;
-  height: 85px;
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  bottom: 0;
-  border-radius: 5px;
-  display: none;
-}
 
-#play-icon {
-  background: none;
-  margin-left: 20px;
-}
 
-#heart-icon {
-  background: none;
-  margin-left: 5px;
-}
+
 
 
 
