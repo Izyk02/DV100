@@ -548,6 +548,7 @@ body {
 /*-------------------------------------Filter Dropdown Menu CSS START*/
 
 .filter-dropdown {
+min-width: 10em;
 position: relative;
 }
 
@@ -573,10 +574,10 @@ border: 2px #2a2f3b solid ;
 border-radius: 0.5em;
 padding: 1em;
 cursor: pointer;
-transition:0.3s;
+transition: 0.3s;
 }
 
-.select.clicked {
+.select-clicked {
   border: 2px #26489a solid;
   box-shadow: 0 0 0.8em #26489a;
 }
@@ -590,7 +591,7 @@ transition:0.3s;
   transition: 0.3s;
 }
 
-.select.hover {
+.select:hover {
 background: #323741;
 }
 
@@ -611,8 +612,8 @@ background: #323741;
   left: 50%;
   width: 135px;
   transform: translateX(-50%);
-  transition: 0.2s;
   z-index: 1;
+  display: none;
 }
 
 .menu li {
@@ -631,7 +632,7 @@ background: #323741;
 }
 
 .menu-open {
-  display :block ;
+  display : block ;
   opacity: 1;
 }
 

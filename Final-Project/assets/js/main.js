@@ -374,43 +374,31 @@ function loadHomeContent(){
 
 /* DROPDOWN JAVASCRIP ERIK/SKYLER BEGIN */
 
-/*
+function dropdownfilter() {
 
-const dropdowns = document.querySelectorAll('.dropdown');
+  $('.filter-year').click(function(){
 
-dropdowns.forEach(dropdown => {
+    $('.year-menu').slideToggle() ;
 
-  const select = dropdown.querySelector('.select');
-  const caret = dropdown.querySelector('.caret');
-  const menu = dropdown.querySelector('.menu');
-  const options = dropdown.querySelectorAll('.menu li');
-  const selected = dropdown.querySelector('.selected');
+  })
 
-  select.addEventListener('click', () => {
+  $('.filter-genre').click(function(){
 
-    select.classList.toggle('select-clicked');
-    caret.classList.toggle('caret-rotate');
-    menu.classList.toggle('menu-open');
-  });
+    $('.genre-menu').slideToggle() ;
 
-  options.forEach(option => {
+  })
 
-    option.addEventListener('click', () => {
-      selected.innerText = option.innerText;
-      select.classList.remove('select-clicked');
-      caret.classList.remove('caret-rotate');
-      menu.classList.remove('menu-open');
+  $('.filter-score').click(function(){
 
-      options.forEach(option => {
-        option.classList.add('active') ;
-      });
-      option.classList.add('active');
+    $('.score-menu').slideToggle() ;
 
-    });
-  });
-});
+  })
+  
+}
 
-*/
+
+
+
 
 
     

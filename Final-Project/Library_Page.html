@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body onload="dropdownfilter()">
     <!--Navbar-->
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -93,17 +93,17 @@
             </div>
 
             <div class=" col-sm-1 filter-dropdown">
-                <div class="select">
+                <div class="select filter-all">
                     <span class="selected">All</span>
                 </div>
             </div>
 
             <div class=" col-sm-1 filter-dropdown">
-                <div class="select">
+                <div class="select filter-genre">
                     <span class="selected">Genre</span>
                     <div class="caret"></div>
                 </div>
-                <ul class="menu">
+                <ul class="menu genre-menu">
                     <li>Test1</li>
                     <li>Test2</li>
                     <li>Test3</li>
@@ -113,11 +113,11 @@
             </div>
 
             <div class=" col-sm-1 filter-dropdown">
-                <div class="select">
+                <div class="select filter-year">
                     <span class="selected">Year</span>
                     <div class="caret"></div>
                 </div>
-                <ul class="menu">
+                <ul class="menu year-menu">
                     <li>Test1</li>
                     <li>Test2</li>
                     <li>Test3</li>
@@ -126,12 +126,12 @@
                 </ul>
             </div>
 
-            <div class=" col-sm-1 filter-dropdown">
-                <div class="select">
+            <div class="col-sm-1 filter-dropdown">
+                <div class="select filter-score">
                     <span class="selected">Imdb Score</span>
                     <div class="caret"></div>
                 </div>
-                <ul class="menu">
+                <ul class="menu score-menu">
                     <li>Test1</li>
                     <li>Test2</li>
                     <li>Test3</li>
@@ -334,5 +334,7 @@
 
 
 </body>
+
+<script src="assets\js\main.js"></script>
 
 </html>
