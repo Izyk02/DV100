@@ -30,7 +30,7 @@
   
       }
     //$("#listOfActors").text("Actors "+temp); 
-   $("#H-movieImg1").append("<img class='H-movie-img' src="+response.base.image.url+" alt=''>"); 
+   //$("#H-movieImg1").append("<img class='H-movie-img' src="+response.base.image.url+" alt=''>"); 
    // $("#year").text("Year: "+response.base.year);
    // $("#time").text("Run Time: "+response.base.runningTimeInMinutes +"min");
   });
