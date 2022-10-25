@@ -715,16 +715,17 @@ margin-bottom: 5px;
 .signIn-Updiv{
   background-color: rgb(255, 255, 255);
   border: solid 2px black;
-  width: 400px;
-  height: 400px;
+  width: 50%;
+  height: 600px;
   border-radius: 10px;
   padding-top: 20px;
+  margin-left: 400px
 }
 .signIn-Indiv{
   background-color: rgb(255, 255, 255);
   border: solid 2px black;
-  width: 400px;
-  height: 300px;
+  width: 50%;
+  height: 600px;
   border-radius: 10px;
   padding-top: 20px;
 }
@@ -755,4 +756,6 @@ margin-left: 17px;
 .signIn-titles{
   margin-left: 35px;
 }
+
+
 /*-------------------------------------Sign In and Up Page CSS (Antonio) END*/

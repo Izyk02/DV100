@@ -1,12 +1,4 @@
 (function() {
-  "use strict";
-
-
-
-
-
-
-
 
   const settings = {
     "async": true,
@@ -14,7 +6,7 @@
     "url": "https://imdb8.p.rapidapi.com/title/get-full-credits?tconst=tt1745960",
     "method": "GET",
     "headers": {
-      "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
+      "X-RapidAPI-Key": "e62dc10aa5msh39921492f48bc1ep1c251fjsn53b4cd5e4cf1",
       "X-RapidAPI-Host": "imdb8.p.rapidapi.com"
     }
   };
@@ -258,7 +250,7 @@
       type: 'bullets',
       clickable: true
     }
-  });
+  });//
 
   /**
    * Porfolio isotope and filter
@@ -394,6 +386,23 @@ function dropdownfilter() {
 
   })
   
+}
+
+function signInPageLoad(){
+  $(".signIn-Updiv").hide();
+  $(".signIn-Indiv").show();
+
+}
+function hideSignIn(){
+  alert("click");
+  $(".signIn-Updiv").show();
+  $(".signIn-Indiv").hide();
+}
+
+function hideSignUp(){
+  alert("click");
+  $(".signIn-Updiv").hide();
+  $(".signIn-Indiv").show();
 }
 
 
