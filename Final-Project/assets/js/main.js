@@ -406,11 +406,310 @@ function hideSignUp(){
 }
 
 
+//sign in page 
 
-
+//adding the users in array of objects
+users = [
+  {
+      Username: "Antonio",
+      password: "1234"
+  },
+  {
+      Username: "Erik",
+      password: "1234"
+  },
+  {
+      Username: "Enrique",
+      password: "1234"
+  },
+  {
+      Username: "Skyler",
+      password: "1234"
+  },
+  {
+      Username: "Emily",
+      password: "1234"
+  }
+]
 
 
     
+
+//api for movies
+//movies listed in array
+moviesListed["tt0107290", "tt0910970", "tt0245429", "tt0068646", "tt0952640", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694"];
+
+var moviesArray = [
+    //movie 1
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 2
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 3
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 4
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 5
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 6
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 7
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 8
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 9
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 10
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 11
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 12
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 13
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 14
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 15
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 16
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 17
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 18
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 19
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 20
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 21
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 22
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 23
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 24
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    },
+    //movie 25
+    {
+        movieName: "",
+        director: "",
+        listOfActors: "",
+        poster: "",
+        year: "",
+        time: "",
+    }
+
+]
+
+$(document).ready(function () {
+
+    for (leti = 0; i <= moviesListed.legnth; i++) {
+
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://imdb8.p.rapidapi.com/title/get-full-credits?tconst=" + moviesListed[i],
+            "method": "GET",
+            "headers": {
+                "X-RapidAPI-Key": "e62dc10aa5msh39921492f48bc1ep1c251fjsn53b4cd5e4cf1",
+                "X-RapidAPI-Host": "imdb8.p.rapidapi.com"
+            }
+        };
+
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            moviesArray[i].director = response.crew.director[0].name;
+            moviesArray[i].movieName = response.base.title;
+            moviesArray[i].listOfActors = response.crew.cast[0].names;
+            moviesArray[i].img = response.base.image.url;
+            moviesArray[i].year = response.base.year;
+            moviesArray[i].time = response.base.runningTimeInMinutes + "min";
+
+            /*$("#director").text("Director: " + response.crew.director[0].name);
+            $("#movieName").text(response.base.title);
+    
+            var temp = "";
+            for (let i = 0; i < 4; i++) {
+                temp += " " + response.cast[i].name + "   ";
+    
+            }
+            $("#listOfActors").text("Cast:  " + temp);
+            $("#img").append("<img id = 'moviePoster' src=" + response.base.image.url + " alt=''>");
+            $("#year").text("Release date: " + response.base.year);
+            $("#time").text("Run Time: " + response.base.runningTimeInMinutes + "min");*/
+
+        });
+
+    }
+})
 
     
     
