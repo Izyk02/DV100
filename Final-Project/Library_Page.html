@@ -13,7 +13,6 @@
     <link href="#">
 
     <!-- Javascript -->
-    <script src="assets\js\main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Vendor CSS Files -->
@@ -28,7 +27,7 @@
 
 </head>
 
-<body onload="dropdownfilter()">
+<body>
     <!--Navbar-->
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -93,57 +92,69 @@
                 <h1 style="color: white; ">Movie Library</h1>
             </div>
 
-            <div class=" col-sm-1 filter-dropdown">
-                <div class="select filter-all">
-                    <span class="selected">All</span>
+            <!--All-Filter-->
+            <div class="col-sm-1">
+            <div class="fl-dropdown">
+                <div class="fl-select">
+                    <span class="fl-selected">All</span>
                 </div>
+            </div>
             </div>
 
-            <div class=" col-sm-1 filter-dropdown">
-                <div class="select filter-genre">
-                    <span class="selected">Genre</span>
-                    <div class="caret"></div>
+            <!--Genre-Filter-->
+            <div class="col-sm-1">
+            <div class="fl-dropdown">
+                <div class="fl-select">
+                    <span class="fl-selected">Genre</span>
+                    <div class="fl-caret"></div>
                 </div>
-                <ul class="menu genre-menu">
-                    <li>Test1</li>
-                    <li>Test2</li>
-                    <li>Test3</li>
-                    <li>Test4</li>
-                    <li>Test5</li>
+                <ul class="fl-menu">
+                    <li>Action</li>
+                    <li>Romance</li>
+                    <li>---</li>
+                    <li class="fl-active">---</li>
+                    <li>---</li>
                 </ul>
+            </div>
             </div>
 
-            <div class=" col-sm-1 filter-dropdown">
-                <div class="select filter-year">
-                    <span class="selected">Year</span>
-                    <div class="caret"></div>
+            <!--Year-Filter-->
+            <div class="col-sm-1">
+            <div class="fl-dropdown">
+                <div class="fl-select">
+                    <span class="fl-selected">Year</span>
+                    <div class="fl-caret"></div>
                 </div>
-                <ul class="menu year-menu">
-                    <li>Test1</li>
-                    <li>Test2</li>
-                    <li>Test3</li>
-                    <li>Test4</li>
-                    <li>Test5</li>
+                <ul class="fl-menu">
+                    <li>2022</li>
+                    <li>2016</li>
+                    <li>2012</li>
+                    <li class="fl-active">2000</li>
+                    <li>1990 </li>
                 </ul>
+            </div>
             </div>
 
-            <div class="col-sm-1 filter-dropdown">
-                <div class="select filter-score">
-                    <span class="selected">Imdb Score</span>
-                    <div class="caret"></div>
+            <!--ImdbScore-Filter-->
+            <div class="col-sm-1">
+            <div class="fl-dropdown">
+                <div class="fl-select">
+                    <span class="fl-selected">Imdb Score</span>
+                    <div class="fl-caret"></div>
                 </div>
-                <ul class="menu score-menu">
-                    <li>Test1</li>
-                    <li>Test2</li>
-                    <li>Test3</li>
-                    <li>Test4</li>
-                    <li>Test5</li>
+                <ul class="fl-menu">
+                    <li>High</li>
+                    <li>Average</li>
+                    <li class="fl-active">Low</li>
                 </ul>
             </div>
+            </div>
+
             
         </div>
     </div>
 
+    <script src="assets\js\filter.js"></script>
 
     <!--Movie List-->
 
