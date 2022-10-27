@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 (function () {
 
   const settings = {
@@ -415,8 +422,15 @@ function hideSignUp() {
 
 //sign in page 
 
-//adding the users in array of objects
-users = [
+
+
+
+//api for movies
+//movies listed in array
+
+var moviesListed = ["tt0107290", "tt0910970", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+//
+var users = [
   {
     Username: "Antonio",
     password: "1234"
@@ -439,14 +453,235 @@ users = [
   }
 ]
 
-
-
-
-//api for movies
-//movies listed in array
-moviesListed["tt0107290", "tt0910970", "tt0245429", "tt0068646", "tt0952640", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694"];
-
 var moviesArray = [
+  //movie 1
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 2
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 3
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 4
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 5
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 6
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 7
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 8
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 9
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 10
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 11
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 12
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 13
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 14
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 15
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 16
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 17
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 18
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 19
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 20
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 21
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 22
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 23
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 24
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  },
+  //movie 25
+  {
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
+  }
+
+]
+/*var moviesArray = [
   //movie 1
   {
     movieName: "",
@@ -665,19 +900,18 @@ var moviesArray = [
   },
   //movie 25
   {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
+    movieName: "TestName",
+    director: "TestDirector",
+    listOfActors: "TestActors",
+    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    year: "TestYear",
+    time: "TestMin",
   }
 
-]
+] */ 
+function loadMovies() {
 
-$(document).ready(function () {
-
-  for (leti = 0; i <= moviesListed.legnth; i++) {
+  for (let i = 0; i < moviesListed.length; i++) {
 
     const settings = {
       "async": true,
@@ -695,8 +929,14 @@ $(document).ready(function () {
       console.log(response);
       moviesArray[i].director = response.crew.director[0].name;
       moviesArray[i].movieName = response.base.title;
-      moviesArray[i].listOfActors = response.crew.cast[0].names;
-      moviesArray[i].img = response.base.image.url;
+      var temp = "";
+      for (let i = 0; i < 4; i++) {
+          temp += " " + response.cast[i].name + "   ";
+ 
+      }
+    
+      moviesArray[i].listOfActors = temp;
+      moviesArray[i].poster = response.base.image.url;
       moviesArray[i].year = response.base.year;
       moviesArray[i].time = response.base.runningTimeInMinutes + "min";
 
@@ -716,7 +956,13 @@ $(document).ready(function () {
     });
 
   }
-})
+  for(let a = 0; a < moviesListed.length; a++){
+      console.log(moviesArray[a]);
+  }
+
+}
+
+
 }
 
 
