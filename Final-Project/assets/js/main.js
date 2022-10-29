@@ -1,4 +1,26 @@
 var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+var users = [
+  {
+    username: "Antonio",
+    password: "1234"
+  },
+  {
+    username: "Erik",
+    password: "1234"
+  },
+  {
+    username: "Enrique",
+    password: "1234"
+  },
+  {
+    username: "Skyler",
+    password: "1234"
+  },
+  {
+    username: "Emily",
+    password: "1234"
+  }
+]
 
 
 var moviesArray = [
@@ -258,81 +280,87 @@ var moviesArray = [
 
 
 function loadHome() {
-
-//URGENT do not take the comments away from this code!!!!!!!
-//URGENT do not take the comments away from this code!!!!!!!
-//URGENT do not take the comments away from this code!!!!!!!
-//URGENT do not take the comments away from this code!!!!!!!
-/*
-  for (let i = 0; i < moviesListed.length; i++) {
-
-    const settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://moviesdb5.p.rapidapi.com/om?i=" + moviesListed[i],
-      "method": "GET",
-      "headers": {
-        "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
-        "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
-      }
-
-    };
-
-
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-      moviesArray[i].director = response.Director;
-      moviesArray[i].movieName = response.Title;
-
-      moviesArray[i].listOfActors = response.Actors;
-      moviesArray[i].poster = response.Poster;
-      moviesArray[i].year = response.Year;
-      moviesArray[i].rating = response.imdbRating;
-      moviesArray[i].time = response.Runtime;
-
-
-    })
-
-  }
-  */
-    console.log("Movies in our array:");
-    console.log("Movies in our array:");
-    console.log("Movies in our array:");
-  for(let a = 0; a < moviesListed.length; a++){
+  $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo " + sessionStorage.getItem("sName") + "!</h4>");
+/*if(sessionStorage.getItem("sStatus" = "yes")){
+ $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome back, " + sessionStorage.getItem("sName") + "! We hope you are having an awesome day!</h4>");
+}else if(sessionStorage.getItem("sStatus") = "none"){
+  $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo! We hope you are having an awesome day!</h4>");
+}*/
+ 
+  //URGENT do not take the comments away from this code!!!!!!!
+  //URGENT do not take the comments away from this code!!!!!!!
+  //URGENT do not take the comments away from this code!!!!!!!
+  //URGENT do not take the comments away from this code!!!!!!!
+  /*
+    for (let i = 0; i < moviesListed.length; i++) {
   
-      console.log(moviesArray[a]);
+      const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://moviesdb5.p.rapidapi.com/om?i=" + moviesListed[i],
+        "method": "GET",
+        "headers": {
+          "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
+          "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
+        }
+  
+      };
+  
+  
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+        moviesArray[i].director = response.Director;
+        moviesArray[i].movieName = response.Title;
+  
+        moviesArray[i].listOfActors = response.Actors;
+        moviesArray[i].poster = response.Poster;
+        moviesArray[i].year = response.Year;
+        moviesArray[i].rating = response.imdbRating;
+        moviesArray[i].time = response.Runtime;
+  
+  
+      })
+  
+    }
+    */
+  console.log("Movies in our array:");
+  console.log("Movies in our array:");
+  console.log("Movies in our array:");
+  for (let a = 0; a < moviesListed.length; a++) {
+
+    console.log(moviesArray[a]);
   }
 
 
 
 
 
- /* const settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://moviesdb5.p.rapidapi.com/om?i=tt1285016",
-    "method": "GET",
-    "headers": {
-      "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
-      "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
-    }
-  };
-
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-    //$("#director").text("Director "+response.crew.director[0].name);
-    //$("#H-movieName1").text("Name "+response.base.title); 
-
-    var temp = "";
-    for (let i = 0; i < 4; i++) {
-      temp += response.cast[i].name;
-
-    }
-    //$("#listOfActors").text("Actors "+temp); 
-    //$("#H-movieImg1").append("<img class='H-movie-img' src="+response.base.image.url+" alt=''>"); 
-    // $("#year").text("Year: "+response.base.year);
-    // $("#time").text("Run Time: "+response.base.runningTimeInMinutes +"min");
-  });*/
+  /* const settings = {
+     "async": true,
+     "crossDomain": true,
+     "url": "https://moviesdb5.p.rapidapi.com/om?i=tt1285016",
+     "method": "GET",
+     "headers": {
+       "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
+       "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
+     }
+   };
+ 
+   $.ajax(settings).done(function (response) {
+     console.log(response);
+     //$("#director").text("Director "+response.crew.director[0].name);
+     //$("#H-movieName1").text("Name "+response.base.title); 
+ 
+     var temp = "";
+     for (let i = 0; i < 4; i++) {
+       temp += response.cast[i].name;
+ 
+     }
+     //$("#listOfActors").text("Actors "+temp); 
+     //$("#H-movieImg1").append("<img class='H-movie-img' src="+response.base.image.url+" alt=''>"); 
+     // $("#year").text("Year: "+response.base.year);
+     // $("#time").text("Run Time: "+response.base.runningTimeInMinutes +"min");
+   });*/
 
 
 
@@ -675,367 +703,99 @@ function loadHomeContent(){
 
 function dropdownfilter() {
 
-  $('.filter-year').click(function(){
+  $('.filter-year').click(function () {
 
-    $('.year-menu').slideToggle() ;
-
-  })
-
-  $('.filter-genre').click(function(){
-
-    $('.genre-menu').slideToggle() ;
+    $('.year-menu').slideToggle();
 
   })
 
-  $('.filter-score').click(function(){
+  $('.filter-genre').click(function () {
 
-    $('.score-menu').slideToggle() ;
+    $('.genre-menu').slideToggle();
 
   })
-  
-}
 
+  $('.filter-score').click(function () {
 
+    $('.score-menu').slideToggle();
 
-function signUserIn(){
-  
-}
-function signInPageLoad(){
-function signInPageLoad() {
-
-  $(".signIn-Updiv").hide();
-  $(".signIn-Indiv").show();
+  })
 
 }
-function hideSignIn() {
-  alert("click");
-  $(".signIn-Updiv").show();
-  $(".signIn-Indiv").hide();
-}
 
-function hideSignUp() {
-  alert("click");
-  $(".signIn-Updiv").hide();
-  $(".signIn-Indiv").show();
-}
+
+
 
 
 //sign in page 
 
+function signInPageLoad() {
+  hideSignUp();
 
 
 
-//api for movies
-//movies listed in array
 
-
-//
-var users = [
-  {
-    Username: "Antonio",
-    password: "1234"
-  },
-  {
-    Username: "Erik",
-    password: "1234"
-  },
-  {
-    Username: "Enrique",
-    password: "1234"
-  },
-  {
-    Username: "Skyler",
-    password: "1234"
-  },
-  {
-    Username: "Emily",
-    password: "1234"
-  }
-]
-
-
-/*var moviesArray = [
-  //movie 1
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 2
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 3
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 4
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 5
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 6
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 7
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 8
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 9
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 10
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 11
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 12
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 13
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 14
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 15
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 16
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 17
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 18
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 19
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 20
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 21
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 22
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 23
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 24
-  {
-    movieName: "",
-    director: "",
-    listOfActors: "",
-    poster: "",
-    year: "",
-    time: "",
-  },
-  //movie 25
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-  }
-
-] */ 
-function loadMovies() {
-
-  for (let i = 0; i < moviesListed.length; i++) {
-
-    const settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://moviesdb5.p.rapidapi.com/om?i=" + moviesListed[i],
-      "method": "GET",
-      "headers": {
-        "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
-        "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
-      }
-
-    };
-
-
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-      moviesArray[i].director = response.crew.director[0].name;
-      moviesArray[i].movieName = response.base.title;
-      var temp = "";
-      for (let i = 0; i < 4; i++) {
-          temp += " " + response.cast[i].name + "   ";
- 
-      }
-    
-      moviesArray[i].listOfActors = temp;
-      moviesArray[i].poster = response.base.image.url;
-      moviesArray[i].year = response.base.year;
-      moviesArray[i].time = response.base.runningTimeInMinutes + "min";
-
-      /*$("#director").text("Director: " + response.crew.director[0].name);
-      $("#movieName").text(response.base.title);
- 
-      var temp = "";
-      for (let i = 0; i < 4; i++) {
-          temp += " " + response.cast[i].name + "   ";
- 
-      }
-      $("#listOfActors").text("Cast:  " + temp);
-      $("#img").append("<img id = 'moviePoster' src=" + response.base.image.url + " alt=''>");
-      $("#year").text("Release date: " + response.base.year);
-      $("#time").text("Run Time: " + response.base.runningTimeInMinutes + "min");*/
-
-    });
-
-  }
-  for(let a = 0; a < moviesListed.length; a++){
-      console.log(moviesArray[a]);
-  }
 
 }
+function hideSignIn() {
+  $(".signIn-Indiv").hide();
+  $(".signIn-Updiv").show();
 
+}
+function hideSignUp() {
+
+  $(".signIn-Updiv").hide();
+  $(".signIn-Indiv").show();
+}
+function signUp(){
+  alert("Sign up successful! Welcome to Cinemo!")
+  $(this).display = "none";
+  window.location = "Home_Page.html";
+}
+function signOut(){
+  sessionStorage.setItem("sName", "");
+  sessionStorage.setItem("sPass", "");
+  sessionStorage.setItem("sStatus", "none");
+}
+function authenticate() {
+
+  var testName = document.getElementById("signIn-userG").value;
+  var testPassword = document.getElementById("signIn-passG").value;
+
+
+  var loginState = true;
+
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].username == testName) {
+      if (users[i].password == testPassword) {
+        sessionStorage.setItem("sName", testName);
+        sessionStorage.setItem("sPass", testPassword);
+        sessionStorage.setItem("sStatus", "yes");
+        
+      
+
+
+  
+        loginState == true;
+        alert("Welcome back, "+ sessionStorage.getItem("sName")+"!");
+        //document.getElementById("form-block").style.display = "none";
+
+        $(this).display = "none";
+
+                          window.location = "Home_Page.html";
+      
+      } else {
+        loginState = false;
+        
+      }
+    }else if(users[i].password != testPassword){
+      loginState = false;
+    }
+  }
+  if (!loginState) {
+    alert("Incorrect info.");
+
+  }
 
 }
 
