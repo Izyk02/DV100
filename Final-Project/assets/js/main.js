@@ -27,12 +27,12 @@ var moviesArray = [
   //movie 1
   {
     movieName: "TestName1",
-    director: "TestDirector",
-    listOfActors: "TestActors",
+    director: "TestDirector1",
+    listOfActors: "TestActors1",
     poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
+    year: "TestYear1",
+    time: "TestMin1",
+    rating: "3.2"
   },
   //movie 2
   {
@@ -56,7 +56,7 @@ var moviesArray = [
   },
   //movie 4
   {
-    movieName: "TestName",
+    movieName: "TestName4",
     director: "TestDirector",
     listOfActors: "TestActors",
     poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
@@ -66,7 +66,7 @@ var moviesArray = [
   },
   //movie 5
   {
-    movieName: "TestName",
+    movieName: "TestName5",
     director: "TestDirector",
     listOfActors: "TestActors",
     poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
@@ -76,7 +76,7 @@ var moviesArray = [
   },
   //movie 6
   {
-    movieName: "TestName",
+    movieName: "TestName6",
     director: "TestDirector",
     listOfActors: "TestActors",
     poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
@@ -281,88 +281,68 @@ var moviesArray = [
 
 function loadHome() {
   $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo " + sessionStorage.getItem("sName") + "!</h4>");
-/*if(sessionStorage.getItem("sStatus" = "yes")){
- $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome back, " + sessionStorage.getItem("sName") + "! We hope you are having an awesome day!</h4>");
-}else if(sessionStorage.getItem("sStatus") = "none"){
-  $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo! We hope you are having an awesome day!</h4>");
-}*/
- 
-  //URGENT do not take the comments away from this code!!!!!!!
-  //URGENT do not take the comments away from this code!!!!!!!
-  //URGENT do not take the comments away from this code!!!!!!!
-  //URGENT do not take the comments away from this code!!!!!!!
-  /*
-    for (let i = 0; i < moviesListed.length; i++) {
-  
-      const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://moviesdb5.p.rapidapi.com/om?i=" + moviesListed[i],
-        "method": "GET",
-        "headers": {
-          "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
-          "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
-        }
-  
-      };
-  
-  
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-        moviesArray[i].director = response.Director;
-        moviesArray[i].movieName = response.Title;
-  
-        moviesArray[i].listOfActors = response.Actors;
-        moviesArray[i].poster = response.Poster;
-        moviesArray[i].year = response.Year;
-        moviesArray[i].rating = response.imdbRating;
-        moviesArray[i].time = response.Runtime;
-  
-  
-      })
-  
-    }
-    */
-  console.log("Movies in our array:");
-  console.log("Movies in our array:");
-  console.log("Movies in our array:");
-  for (let a = 0; a < moviesListed.length; a++) {
+  /*if(sessionStorage.getItem("sStatus" = "yes")){
+   $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome back, " + sessionStorage.getItem("sName") + "! We hope you are having an awesome day!</h4>");
+  }else if(sessionStorage.getItem("sStatus") = "none"){
+    $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo! We hope you are having an awesome day!</h4>");
+  }*/
 
-    console.log(moviesArray[a]);
+  //URGENT do not take the comments away from this code!!!!!!!
+  //URGENT do not take the comments away from this code!!!!!!!
+  //URGENT do not take the comments away from this code!!!!!!!
+  //URGENT do not take the comments away from this code!!!!!!!
+/*
+  for (let i = 0; i < moviesListed.length; i++) {
+
+    const settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://moviesdb5.p.rapidapi.com/om?i=" + moviesListed[i],
+      "method": "GET",
+      "headers": {
+        "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
+        "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
+      }
+
+    };
+
+
+    $.ajax(settings).done(function (response) {
+
+      moviesArray[i].director = response.Director;
+      moviesArray[i].movieName = response.Title;
+
+      moviesArray[i].listOfActors = response.Actors;
+      moviesArray[i].poster = response.Poster;
+      moviesArray[i].year = response.Year;
+      moviesArray[i].rating = response.imdbRating;
+      moviesArray[i].time = response.Runtime;
+
+
+    })
+
   }
 
+  console.log("Movies in our array:");
+  console.log("Movies in our array:");
+  console.log("Movies in our array:");
+  /*for (let a = 0; a < moviesListed.length; a++) {
+
+    console.log(moviesArray[a]);
 
 
+  }*/
+/*
+  var jsonArr = JSON.stringify(moviesArray);
+  localStorage.setItem("movieArray", jsonArr);
+  var str = localStorage.getItem("movieArray");
+  var parsedArr = JSON.parse(str);
+
+  moviesArray == parsedArr;
+*/
 
 
-  /* const settings = {
-     "async": true,
-     "crossDomain": true,
-     "url": "https://moviesdb5.p.rapidapi.com/om?i=tt1285016",
-     "method": "GET",
-     "headers": {
-       "X-RapidAPI-Key": "ccd27e8962msh7debb0e3492d593p1961a8jsn90e63bb1c339",
-       "X-RapidAPI-Host": "moviesdb5.p.rapidapi.com"
-     }
-   };
- 
-   $.ajax(settings).done(function (response) {
-     console.log(response);
-     //$("#director").text("Director "+response.crew.director[0].name);
-     //$("#H-movieName1").text("Name "+response.base.title); 
- 
-     var temp = "";
-     for (let i = 0; i < 4; i++) {
-       temp += response.cast[i].name;
- 
-     }
-     //$("#listOfActors").text("Actors "+temp); 
-     //$("#H-movieImg1").append("<img class='H-movie-img' src="+response.base.image.url+" alt=''>"); 
-     // $("#year").text("Year: "+response.base.year);
-     // $("#time").text("Run Time: "+response.base.runningTimeInMinutes +"min");
-   });*/
-
-
+  
 
 
   // This code gets the details for a specified movie, enter the movie code you will get when searching the API's database eg.tt1745960
@@ -747,12 +727,30 @@ function hideSignUp() {
   $(".signIn-Updiv").hide();
   $(".signIn-Indiv").show();
 }
-function signUp(){
+function signUp() {
+  var localName = document.getElementById("signIn-nameL").value;
+  var localPass = document.getElementById("signIn-passL").value;
+
+  localStorage.setItem("lName", localName);
+  localStorage.setItem("lPass", localPass);
+  var newUser = [
+    {
+      username: localName,
+      password: localPass
+    }
+  ]
+
+  users.push(newUser);
+  for (let v = 0; v < users.length; v++) {
+    console.log(users[v]);
+  }
   alert("Sign up successful! Welcome to Cinemo!")
+  sessionStorage.setItem("sName", localName);
+  sessionStorage.setItem("sPass", localPass);
   $(this).display = "none";
   window.location = "Home_Page.html";
 }
-function signOut(){
+function signOut() {
   sessionStorage.setItem("sName", "");
   sessionStorage.setItem("sPass", "");
   sessionStorage.setItem("sStatus", "none");
@@ -771,24 +769,24 @@ function authenticate() {
         sessionStorage.setItem("sName", testName);
         sessionStorage.setItem("sPass", testPassword);
         sessionStorage.setItem("sStatus", "yes");
-        
-      
 
 
-  
+
+
+
         loginState == true;
-        alert("Welcome back, "+ sessionStorage.getItem("sName")+"!");
+        alert("Welcome back, " + sessionStorage.getItem("sName") + "!");
         //document.getElementById("form-block").style.display = "none";
 
         $(this).display = "none";
 
-                          window.location = "Home_Page.html";
-      
+        window.location = "Home_Page.html";
+
       } else {
         loginState = false;
-        
+
       }
-    }else if(users[i].password != testPassword){
+    } else if (users[i].password != testPassword) {
       loginState = false;
     }
   }
@@ -799,4 +797,26 @@ function authenticate() {
 
 }
 
+function addMoviesToLibrary() {
 
+  console.log("Test");
+  console.log("Test");
+  //var str = localStorage.getItem("movieArray");
+ // var parsedArr = JSON.parse(str);
+
+  //moviesArray == parsedArr;
+  //console.log(moviesArray);
+
+
+
+
+  for (let l = 0; l < moviesArray.length; l++) {
+    document.getElementById("library-image" + l).innerHTML = "<img src=" + moviesArray[l].poster + " class='card-img-top' alt'...'>";
+    document.getElementById("library-title" + l).innerHTML = " <h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[l].movieName + " </a></h5> ";
+    document.getElementById("library-btnPlay" + l).innerHTML = " <a href='#' class='btn btn-primary'>Play</a> ";
+    document.getElementById("library-btnAdd" + l).innerHTML = " <a href='#' class='btn btn-primary'>Add</a> ";
+  }
+
+
+
+}

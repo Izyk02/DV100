@@ -94,63 +94,63 @@
 
             <!--All-Filter-->
             <div class="col-sm-1">
-            <div class="fl-dropdown">
-                <div class="fl-select">
-                    <span class="fl-selected">All</span>
+                <div class="fl-dropdown">
+                    <div class="fl-select">
+                        <span class="fl-selected">All</span>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!--Genre-Filter-->
             <div class="col-sm-1">
-            <div class="fl-dropdown">
-                <div class="fl-select">
-                    <span class="fl-selected">Genre</span>
-                    <div class="fl-caret"></div>
+                <div class="fl-dropdown">
+                    <div class="fl-select">
+                        <span class="fl-selected">Genre</span>
+                        <div class="fl-caret"></div>
+                    </div>
+                    <ul class="fl-menu">
+                        <li>Action</li>
+                        <li>Romance</li>
+                        <li>---</li>
+                        <li class="fl-active">---</li>
+                        <li>---</li>
+                    </ul>
                 </div>
-                <ul class="fl-menu">
-                    <li>Action</li>
-                    <li>Romance</li>
-                    <li>---</li>
-                    <li class="fl-active">---</li>
-                    <li>---</li>
-                </ul>
-            </div>
             </div>
 
             <!--Year-Filter-->
             <div class="col-sm-1">
-            <div class="fl-dropdown">
-                <div class="fl-select">
-                    <span class="fl-selected">Year</span>
-                    <div class="fl-caret"></div>
+                <div class="fl-dropdown">
+                    <div class="fl-select">
+                        <span class="fl-selected">Year</span>
+                        <div class="fl-caret"></div>
+                    </div>
+                    <ul class="fl-menu">
+                        <li>2022</li>
+                        <li>2016</li>
+                        <li>2012</li>
+                        <li class="fl-active">2000</li>
+                        <li>1990 </li>
+                    </ul>
                 </div>
-                <ul class="fl-menu">
-                    <li>2022</li>
-                    <li>2016</li>
-                    <li>2012</li>
-                    <li class="fl-active">2000</li>
-                    <li>1990 </li>
-                </ul>
-            </div>
             </div>
 
             <!--ImdbScore-Filter-->
             <div class="col-sm-1">
-            <div class="fl-dropdown">
-                <div class="fl-select">
-                    <span class="fl-selected">Imdb Score</span>
-                    <div class="fl-caret"></div>
+                <div class="fl-dropdown">
+                    <div class="fl-select">
+                        <span class="fl-selected">Imdb Score</span>
+                        <div class="fl-caret"></div>
+                    </div>
+                    <ul class="fl-menu">
+                        <li>High</li>
+                        <li>Average</li>
+                        <li class="fl-active">Low</li>
+                    </ul>
                 </div>
-                <ul class="fl-menu">
-                    <li>High</li>
-                    <li>Average</li>
-                    <li class="fl-active">Low</li>
-                </ul>
-            </div>
             </div>
 
-            
+
         </div>
     </div>
 
@@ -166,116 +166,285 @@
         <div class="row row-cols-1 row-cols-md-5 g-4 g-md-5">
             <!--row-cols-1 laying out the cards on one column, and .row-cols-md-5 splitting  cards to equal width across multiple rows, from the medium breakpoint up-->
             <!--g-3 and g-md-4 create spaces between columns - gutter-->
-           
+
             <!--Movie card1-->
             <div class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/51t0TPMP8zL.jpg" class="card-img-top" alt="...">
+                    <div id="library-image0"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add </a>
+                        <div id="library-title0"></div>
+                        <div id="library-btnPlay0"></div>
+                        <div id="library-btnAdd0"></div>
                     </div>
                 </div>
             </div>
 
             <!--Movie card2-->
-            <div class="col">
-                <div class="movie-card">
-                    <img src="assets/img/Movie-Posters/71x1RHSaEhL._AC_SL1000_.jpg" class="card-img-top" alt="...">
+            <div onclick="addMoviesToLibrary()" class="col">
+                <div class="movie-card ">
+                    <div id="library-image1"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title1"></div>
+                        <div id="library-btnPlay1"></div>
+                        <div id="library-btnAdd1"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card3-->
             <div class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/111f028a5306b64d7c0374e42991bfb1.jpg" class="card-img-top" alt="...">
+                    <div id="library-image2"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title2"></div>
+                        <div id="library-btnPlay2"></div>
+                        <div id="library-btnAdd2"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card4-->
             <div class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/Avengers_-_End_Game_800x.webp" class="card-img-top" alt="...">
+                    <div id="library-image3"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title3"></div>
+                        <div id="library-btnPlay3"></div>
+                        <div id="library-btnAdd3"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card5-->
-            <div class="col">
+            <div  class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/brand-name-movie-posters-lance-ford-16-5e8b09fa00907__700.jpg" class="card-img-top" alt="...">
+                    <div id="library-image4"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title4"></div>
+                        <div id="library-btnPlay4"></div>
+                        <div id="library-btnAdd4"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card6-->
             <div class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/images.jpg" class="card-img-top" alt="...">
+                    <div id="library-image5"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title5"></div>
+                        <div id="library-btnPlay5"></div>
+                        <div id="library-btnAdd5"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card7-->
-            <div class="col">
+            <div  class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/movie-poster-template-design-21a1c803fe4ff4b858de24f5c91ec57f_screen.jpg" class="card-img-top" alt="...">
+                    <div id="library-image6"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title6"></div>
+                        <div id="library-btnPlay6"></div>
+                        <div id="library-btnAdd6"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card8-->
             <div class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/parasite2.jpg" class="card-img-top" alt="...">
+                    <div id="library-image7"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title7"></div>
+                        <div id="library-btnPlay7"></div>
+                        <div id="library-btnAdd7"></div>
                     </div>
                 </div>
             </div>
-
             <!--Movie card9-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image8"></div>
+                    <div class="card-body">
+                        <div id="library-title8"></div>
+                        <div id="library-btnPlay8"></div>
+                        <div id="library-btnAdd8"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card10-->
             <div class="col">
                 <div class="movie-card ">
-                    <img src="assets/img/Movie-Posters/star-is-born-web.jpg" class="card-img-top" alt="...">
+                    <div id="library-image9"></div>
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="Detailed_Page.html">Movie Title </a></h5>
-                        <a href="#" class="btn btn-primary">Play</a>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <div id="library-title9"></div>
+                        <div id="library-btnPlay9"></div>
+                        <div id="library-btnAdd9"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card11-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image10"></div>
+                    <div class="card-body">
+                        <div id="library-title10"></div>
+                        <div id="library-btnPlay10"></div>
+                        <div id="library-btnAdd10"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card12-->
+            <div class="col">
+                <div class="movie-card ">
+                    <div id="library-image11"></div>
+                    <div class="card-body">
+                        <div id="library-title11"></div>
+                        <div id="library-btnPlay11"></div>
+                        <div id="library-btnAdd11"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card13-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image12"></div>
+                    <div class="card-body">
+                        <div id="library-title12"></div>
+                        <div id="library-btnPlay12"></div>
+                        <div id="library-btnAdd12"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card14-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image13"></div>
+                    <div class="card-body">
+                        <div id="library-title13"></div>
+                        <div id="library-btnPlay13"></div>
+                        <div id="library-btnAdd13"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card15-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image14"></div>
+                    <div class="card-body">
+                        <div id="library-title14"></div>
+                        <div id="library-btnPlay14"></div>
+                        <div id="library-btnAdd14"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card16-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image15"></div>
+                    <div class="card-body">
+                        <div id="library-title15"></div>
+                        <div id="library-btnPlay15"></div>
+                        <div id="library-btnAdd15"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card17-->
+            <div class="col">
+                <div class="movie-card ">
+                    <div id="library-image16"></div>
+                    <div class="card-body">
+                        <div id="library-title16"></div>
+                        <div id="library-btnPlay16"></div>
+                        <div id="library-btnAdd16"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card18-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image17"></div>
+                    <div class="card-body">
+                        <div id="library-title17"></div>
+                        <div id="library-btnPlay17"></div>
+                        <div id="library-btnAdd17"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card19-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image18"></div>
+                    <div class="card-body">
+                        <div id="library-title18"></div>
+                        <div id="library-btnPlay18"></div>
+                        <div id="library-btnAdd18"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card20-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image19"></div>
+                    <div class="card-body">
+                        <div id="library-title19"></div>
+                        <div id="library-btnPlay19"></div>
+                        <div id="library-btnAdd19"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card21-->
+            <div class="col">
+                <div class="movie-card ">
+                    <div id="library-image20"></div>
+                    <div class="card-body">
+                        <div id="library-title20"></div>
+                        <div id="library-btnPlay20"></div>
+                        <div id="library-btnAdd20"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card22-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image21"></div>
+                    <div class="card-body">
+                        <div id="library-title21"></div>
+                        <div id="library-btnPlay21"></div>
+                        <div id="library-btnAdd21"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card23-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image22"></div>
+                    <div class="card-body">
+                        <div id="library-title22"></div>
+                        <div id="library-btnPlay22"></div>
+                        <div id="library-btnAdd22"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card24-->
+            <div  class="col">
+                <div class="movie-card ">
+                    <div id="library-image23"></div>
+                    <div class="card-body">
+                        <div id="library-title23"></div>
+                        <div id="library-btnPlay23"></div>
+                        <div id="library-btnAdd23"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Movie card25-->
+            <div class="col">
+                <div class="movie-card ">
+                    <div id="library-image24"></div>
+                    <div class="card-body">
+                        <div id="library-title24"></div>
+                        <div id="library-btnPlay24"></div>
+                        <div id="library-btnAdd24"></div>
                     </div>
                 </div>
             </div>
 
-            <!--Movie card10-->
+            <!--Movie card10
             <div class="col">
                 <div class="movie-card">
                     <img src="assets/img/Movie-Posters/Top Gun Maverick.jpg" class="card-img-top" alt="...">
@@ -285,14 +454,14 @@
                         <a href="#" class="btn btn-primary">Add</a>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
         </div>
     </div>
- <br>
- <br>
+    <br>
+    <br>
 
- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow'></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow'></i></a>
     <!--FOOTER SECTION-->
     <section class="footer">
         <div class="social">
@@ -303,7 +472,7 @@
         </div>
         <ul class="list">
             <li>
-                <a href="#">Home</a>
+                <a href="Home_Page.html">Home</a>
             </li>
             <li>
                 <a href="#">Services</a>
