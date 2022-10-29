@@ -240,7 +240,7 @@ var moviesArray = [
     poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
     year: "TestYear",
     time: "TestMin",
-    rating: ""
+    rating: "4.6"
   },
   //movie 25
   {
@@ -259,7 +259,11 @@ var moviesArray = [
 
 function loadHome() {
 
-  
+//URGENT do not take the comments away from this code!!!!!!!
+//URGENT do not take the comments away from this code!!!!!!!
+//URGENT do not take the comments away from this code!!!!!!!
+//URGENT do not take the comments away from this code!!!!!!!
+/*
   for (let i = 0; i < moviesListed.length; i++) {
 
     const settings = {
@@ -279,34 +283,18 @@ function loadHome() {
       console.log(response);
       moviesArray[i].director = response.Director;
       moviesArray[i].movieName = response.Title;
-     /* var temp = "";
-      for (let i = 0; i < 4; i++) {
-          temp += " " +  + "   ";
- 
-      }
-    */
+
       moviesArray[i].listOfActors = response.Actors;
       moviesArray[i].poster = response.Poster;
       moviesArray[i].year = response.Year;
       moviesArray[i].rating = response.imdbRating;
       moviesArray[i].time = response.Runtime;
 
-      /*$("#director").text("Director: " + response.crew.director[0].name);
-      $("#movieName").text(response.base.title);
- 
-      var temp = "";
-      for (let i = 0; i < 4; i++) {
-          temp += " " + response.cast[i].name + "   ";
- 
-      }
-      $("#listOfActors").text("Cast:  " + temp);
-      $("#img").append("<img id = 'moviePoster' src=" + response.base.image.url + " alt=''>");
-      $("#year").text("Release date: " + response.base.year);
-      $("#time").text("Run Time: " + response.base.runningTimeInMinutes + "min");*/
 
-    });
+    })
 
   }
+  */
     console.log("Movies in our array:");
     console.log("Movies in our array:");
     console.log("Movies in our array:");
