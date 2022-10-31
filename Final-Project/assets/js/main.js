@@ -27,531 +27,18 @@ var users = [
   }
 ]
 
+var moviesArray = [];
 
-var moviesArray = [
-  //movie 1
-  {
-    movieName: "TestName1",
-    director: "TestDirector1",
-    listOfActors: "TestActors1",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear1",
-    time: "TestMin1",
-    rating: "3.2"
-  },
-  //movie 2
-  {
-    movieName: "TestName2",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 3
-  {
-    movieName: "TestName3",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 4
-  {
-    movieName: "TestName4",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 5
-  {
-    movieName: "TestName5",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 6
-  {
-    movieName: "TestName6",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 7
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 8
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 9
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 10
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 11
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 12
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 13
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 14
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 15
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 16
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 17
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 18
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 19
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 20
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 21
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 22
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 23
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  },
-  //movie 24
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: "4.6"
-  },
-  //movie 25
-  {
-    movieName: "TestName",
-    director: "TestDirector",
-    listOfActors: "TestActors",
-    poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    year: "TestYear",
-    time: "TestMin",
-    rating: ""
-  }
-
-]
-
+//console.log(moviesListed);
 
 function loadMovieContent() {
-  var moviesArray = [];
-  var moviesArra = [
-    //movie 1
-    {
-      movieName: "TestName1",
-      director: "TestDirector1",
-      listOfActors: "TestActors1",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear1",
-      time: "TestMin1",
-      rating: "3.2"
-    },
-    //movie 2
-    {
-      movieName: "TestName2",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 3
-    {
-      movieName: "TestName3",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 4
-    {
-      movieName: "TestName4",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 5
-    {
-      movieName: "TestName5",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 6
-    {
-      movieName: "TestName6",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 7
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 8
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 9
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 10
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 11
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 12
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 13
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 14
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 15
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 16
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 17
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 18
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 19
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 20
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 21
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 22
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 23
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    },
-    //movie 24
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: "4.6"
-    },
-    //movie 25
-    {
-      movieName: "TestName",
-      director: "TestDirector",
-      listOfActors: "TestActors",
-      poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-      year: "TestYear",
-      time: "TestMin",
-      rating: ""
-    }
-  
-  ]
-  /*if(sessionStorage.getItem("sStatus" = "yes")){
-   $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome back, " + sessionStorage.getItem("sName") + "! We hope you are having an awesome day!</h4>");
-  }else if(sessionStorage.getItem("sStatus") = "none"){
-    $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo! We hope you are having an awesome day!</h4>");
-  }*/
 
-  //URGENT do not take the comments away from this code!!!!!!!
-  //URGENT do not take the comments away from this code!!!!!!!
-  //URGENT do not take the comments away from this code!!!!!!!
-  //URGENT do not take the comments away from this code!!!!!!!
+
+
 
   for (let i = 0; i < moviesListed.length; i++) {
 
-    const settings = {
+    var settings = {
       "async": true,
       "crossDomain": true,
       "url": "https://moviesdb5.p.rapidapi.com/om?i=" + moviesListed[i],
@@ -565,7 +52,7 @@ function loadMovieContent() {
 
 
     $.ajax(settings).done(function (response) {
- 
+
       var dir = response.Director;
       var name = response.Title;
       var act = response.Actors;
@@ -583,102 +70,27 @@ function loadMovieContent() {
         time: tim,
         rating: rate
       }
-      
+
       moviesArray.push(tempObj);
-      console.log("ojejncejkfbvjernvnjervrubvubrv3ervc");
-      console.log(moviesArray[i]);
+
+      //console.log(moviesArray[i]);
 
     })
-  if(moviesArray[0].movieName != "TestName1"){
-
-  console.log("Movies in our array:");
-  console.log("Movies in our array:");
-  console.log("Movies in our array:");
-  for (let a = 0; a < moviesListed.length; a++) {
-
-    console.log(moviesArray[a]);
-
-
+   
   }
 
-  var jsonArr = JSON.stringify(moviesArray);
-  localStorage.setItem("movieArray", jsonArr);
-  var str = localStorage.getItem("movieArray");
-  var parsedArr = JSON.parse(str);
+  
+  setTimeout(function() {   var jsonArr = JSON.stringify(moviesArray);localStorage.setItem("mArray", jsonArr); }, 5000);
 
-  moviesArray == parsedArr;
-  console.log("testARRRRRRRRR");
-  console.log(moviesArray[0]);
-}
-
-  }
+  // var str = localStorage.getItem("mArray");
+  //var parsedArr = JSON.parse(str);
 
 
 
 
-
-  // This code gets the details for a specified movie, enter the movie code you will get when searching the API's database eg.tt1745960
-  //this is the code for Top Gun Maverick.
-  // in the url replace "const=(movie code starting with tt)"
-
+  
 
 }
-(function () {
-  // document.getElementById("place-pic" + r).innerHTML = "<img class='cart-image'  src = \"../" + vinyls[randomVinylCart].Image + "\">";
-  //document.getElementByClass(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo " + sessionStorage.getItem("sName") + "!</h4>");
-  //$(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome to Cinemo " + sessionStorage.getItem("sName") + "!</h4>");
-  "use strict";
-
-  /**
-   * Easy selector helper function //Erik was here
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
-  }
-
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
-
-
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-
-})()
-
 
 
 
@@ -758,7 +170,7 @@ function authenticate() {
 
         loginState == true;
         alert("Welcome back, " + sessionStorage.getItem("sName") + "!");
-       // loadMovieContent();
+        // loadMovieContent();
         //document.getElementById("form-block").style.display = "none";
 
         $(this).display = "none";
@@ -782,6 +194,7 @@ function authenticate() {
 
 function addMoviesToLibrary() {
 
+  //user[].watchlist.push(movieArray[x]);
   console.log("Test");
   console.log("Test");
   //var str = localStorage.getItem("movieArray");
@@ -802,4 +215,22 @@ function addMoviesToLibrary() {
 
 
 
+}
+function showMovies() {
+  
+console.log(moviesArray[4].year);
+  var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[4].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"></div> <div id=\"library-btnPlay1\"></div><div id=\"library-btnAdd1\"></div>  </div>     </div> </div>";
+        
+                  
+               
+                       
+                       
+                        
+                  
+           
+           
+
+         for(let x = 0; x < moviesArray.length; x++){
+          $("#movies").append(addDiv);
+         }
 }
