@@ -200,7 +200,30 @@ function authenticate() {
 
 }
 
+function addMoviesToLibrary() {
 
+  //user[].watchlist.push(movieArray[x]);
+  console.log("Test");
+  console.log("Test");
+  //var str = localStorage.getItem("movieArray");
+  // var parsedArr = JSON.parse(str);
+
+  //moviesArray == parsedArr;
+  //console.log(moviesArray);
+
+
+
+
+  for (let l = 0; l < moviesArray.length; l++) {
+    document.getElementById("library-image" + l).innerHTML = "<img src=" + moviesArray[l].poster + " class='card-img-top' alt'...'>";
+    document.getElementById("library-title" + l).innerHTML = " <h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[l].movieName + " </a></h5> ";
+    document.getElementById("library-btnPlay" + l).innerHTML = " <a href='#' class='btn btn-primary'>Play</a> ";
+    document.getElementById("library-btnAdd" + l).innerHTML = " <a href='#' class='btn btn-primary'>Add</a> ";
+  }
+
+
+
+}
 function showMovies() {
 
   //console.log(moviesArray[4].year);
