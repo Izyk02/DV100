@@ -1,4 +1,7 @@
+//This variable has the list of tt codes we will need when calling the API to tell the API what movies we want
+//They are sourced from IMDB
 var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+//This users array stores the list of watchlist movies as well as login info
 var users = [
   {
     username: "Antonio",
@@ -26,16 +29,16 @@ var users = [
     watchlist: [""]
   }
 ]
-
+//This array will store all 25 movies when the API calls them
 var moviesArray = [];
 
-//console.log(moviesListed);
+
 
 function loadMovieContent() {
+  //This function is called in order to retrieve the  25 movies then save them using JSON into the Local Storage
 
 
-
-
+  //The for loop loops through the tt codes and substitutes them in the API to retrieve the info
   for (let i = 0; i < moviesListed.length; i++) {
 
     var settings = {
@@ -52,7 +55,7 @@ function loadMovieContent() {
 
 
     $.ajax(settings).done(function (response) {
-
+      //These Temporary variables store the movie information
       var dir = response.Director;
       var name = response.Title;
       var act = response.Actors;
@@ -60,6 +63,7 @@ function loadMovieContent() {
       var year = response.Year;
       var rate = response.imdbRating;
       var tim = response.Runtime;
+      //After getting th movie info it is then stored in a temporary obj to then be sent to the array of objects called mArray in Local Storage
 
       var tempObj = {
         movieName: name,
@@ -70,17 +74,19 @@ function loadMovieContent() {
         time: tim,
         rating: rate
       }
-
+      //Here the temporary onj is sent to be added to the movie array
       moviesArray.push(tempObj);
 
       //console.log(moviesArray[i]);
 
     })
-   
+
   }
 
-  
-  setTimeout(function() {   var jsonArr = JSON.stringify(moviesArray);localStorage.setItem("mArray", jsonArr); }, 5000);
+  //This peace of code was added because the API we use lags a bit and that causes the code to not read it before 
+  //saving the info, so this time function waits 5 seconds before loading the info into the array to make sure
+  //the info is there and that the API has had enough time to call it before we try and save it.
+  setTimeout(function () { var jsonArr = JSON.stringify(moviesArray); localStorage.setItem("mArray", jsonArr); }, 5000);
 
   // var str = localStorage.getItem("mArray");
   //var parsedArr = JSON.parse(str);
@@ -88,7 +94,7 @@ function loadMovieContent() {
 
 
 
-  
+
 
 }
 
@@ -104,23 +110,20 @@ function loadMovieContent() {
 
 function signInPageLoad() {
   hideSignUp();
-
-
-
-
-
 }
 function hideSignIn() {
+  //This code just shows and hides the relevant divs depending on what the user wants to do.
   $(".signIn-Indiv").hide();
   $(".signIn-Updiv").show();
 
 }
 function hideSignUp() {
-
+  //This code just shows and hides the relevant divs depending on what the user wants to do.
   $(".signIn-Updiv").hide();
   $(".signIn-Indiv").show();
 }
 function signUp() {
+  //Here we save the sign up information to local storage so that it can be sent to the Home Page
   var localName = document.getElementById("signIn-nameL").value;
   var localPass = document.getElementById("signIn-passL").value;
 
@@ -132,30 +135,36 @@ function signUp() {
       password: localPass
     }
   ]
-
+  //Here we save the new user to the array of users
   users.push(newUser);
   for (let v = 0; v < users.length; v++) {
     console.log(users[v]);
   }
   alert("Sign up successful! Welcome to Cinemo!")
+  //Here the information is also sent to session storage so that the Home Page can display the person's name
   sessionStorage.setItem("sName", localName);
   sessionStorage.setItem("sPass", localPass);
-  //loadMovieContent();
+  //Here we hide the sign in page and show the Home Page
   $(this).display = "none";
   window.location = "Home_Page.html";
 }
 function signOut() {
+  //Once the relevant button is clicked the code wipes the current logged in user
+  //from the session storage and then returns them to the sign in screen
   sessionStorage.setItem("sName", "");
   sessionStorage.setItem("sPass", "");
-  sessionStorage.setItem("sStatus", "none");
+
 }
 function authenticate() {
+//This code makes sure that the user trying to sign in is a valid user 
 
+//After getting the info from the sign in page the code stores it to test it
   var testName = document.getElementById("signIn-userG").value;
   var testPassword = document.getElementById("signIn-passG").value;
 
 
   var loginState = true;
+//This for loop, loops throught the array of users testing to see if the info entered matches one of the saved users
 
   for (let i = 0; i < users.length; i++) {
     if (users[i].username == testName) {
@@ -170,11 +179,10 @@ function authenticate() {
 
         loginState == true;
         alert("Welcome back, " + sessionStorage.getItem("sName") + "!");
-        // loadMovieContent();
-        //document.getElementById("form-block").style.display = "none";
+        //Log in is successful and the page displays an alert with their name
 
         $(this).display = "none";
-
+//Redirect to the Home page
         window.location = "Home_Page.html";
 
       } else {
@@ -192,45 +200,31 @@ function authenticate() {
 
 }
 
-function addMoviesToLibrary() {
 
-  //user[].watchlist.push(movieArray[x]);
-  console.log("Test");
-  console.log("Test");
-  //var str = localStorage.getItem("movieArray");
-  // var parsedArr = JSON.parse(str);
-
-  //moviesArray == parsedArr;
-  //console.log(moviesArray);
-
-
-
-
-  for (let l = 0; l < moviesArray.length; l++) {
-    document.getElementById("library-image" + l).innerHTML = "<img src=" + moviesArray[l].poster + " class='card-img-top' alt'...'>";
-    document.getElementById("library-title" + l).innerHTML = " <h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[l].movieName + " </a></h5> ";
-    document.getElementById("library-btnPlay" + l).innerHTML = " <a href='#' class='btn btn-primary'>Play</a> ";
-    document.getElementById("library-btnAdd" + l).innerHTML = " <a href='#' class='btn btn-primary'>Add</a> ";
-  }
-
-
-
-}
 function showMovies() {
-  
-console.log(moviesArray[4].year);
-  var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[4].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"></div> <div id=\"library-btnPlay1\"></div><div id=\"library-btnAdd1\"></div>  </div>     </div> </div>";
-        
-                  
-               
-                       
-                       
-                        
-                  
-           
-           
 
-         for(let x = 0; x < moviesArray.length; x++){
-          $("#movies").append(addDiv);
-         }
+  //console.log(moviesArray[4].year);
+  var str = localStorage.getItem("mArray");
+
+  var parsedArr = JSON.parse(str);
+  //console.log(parsedArr);
+  moviesArray = parsedArr;
+  console.log("showMoviesRuns");
+  console.log(moviesArray);
+
+  //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+
+
+
+
+
+
+
+
+
+
+  for (let x = 0; x < moviesArray.length; x++) {
+    var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    $("#movies").append(addDiv);
+  }
 }
