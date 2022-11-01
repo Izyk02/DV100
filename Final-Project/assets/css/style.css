@@ -2,7 +2,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
-
+.carousel-item{
+  display: block;
+}
 a {
   color: #106eea;
   text-decoration: none;
