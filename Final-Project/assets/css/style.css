@@ -552,12 +552,25 @@ body {
 .detailed-button {
   float: right;
   margin-right: 80px;
+  margin-bottom: 30px;
+  background-color: #7478F3;
+  color: white;
+  border-radius: 5px;
+  border:solid white 1px;
+  transition-duration: 00.1s;
+}
+
+.detailed-button:hover {
+  background-color: #03244f;
 }
 
 .detailed-movieName,
 .detailed-director,
 .detailed-actors,
-.detailed-synopsis {
+.detailed-synopsis,
+.detailed-year,
+.detailed-time,
+.detailed-rating {
   color: white;
   font-family: "Roboto", sans-serif;
 }
