@@ -1,5 +1,10 @@
+/*HEAD
+
+
 //This variable has the list of tt codes we will need when calling the API to tell the API what movies we want
 //They are sourced from IMDB
+ 616eae0379b3813cf7f93ebb40e44a1c355e00db*/
+
 var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
 //This users array stores the list of watchlist movies as well as login info
 var users = [
@@ -103,9 +108,12 @@ function loadMovieContent() {
 
 }
 
+document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
+document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
 
-
-
+$('.carousel').carousel(cycle)({
+  interval: 2000
+})
 
 
 
