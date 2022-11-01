@@ -56,6 +56,7 @@ function loadMovieContent() {
 
     $.ajax(settings).done(function (response) {
       //These Temporary variables store the movie information
+      console.log(response);
       var dir = response.Director;
       var name = response.Title;
       var act = response.Actors;
@@ -63,6 +64,8 @@ function loadMovieContent() {
       var year = response.Year;
       var rate = response.imdbRating;
       var tim = response.Runtime;
+      var plo = response.Plot;
+      var gen = response.Genre;
       //After getting th movie info it is then stored in a temporary obj to then be sent to the array of objects called mArray in Local Storage
 
       var tempObj = {
@@ -72,7 +75,9 @@ function loadMovieContent() {
         poster: img,
         year: year,
         time: tim,
-        rating: rate
+        rating: rate,
+        plot: plo,
+        genre: gen
       }
       //Here the temporary onj is sent to be added to the movie array
       moviesArray.push(tempObj);
@@ -156,15 +161,15 @@ function signOut() {
 
 }
 function authenticate() {
-//This code makes sure that the user trying to sign in is a valid user 
+  //This code makes sure that the user trying to sign in is a valid user 
 
-//After getting the info from the sign in page the code stores it to test it
+  //After getting the info from the sign in page the code stores it to test it
   var testName = document.getElementById("signIn-userG").value;
   var testPassword = document.getElementById("signIn-passG").value;
 
 
   var loginState = true;
-//This for loop, loops throught the array of users testing to see if the info entered matches one of the saved users
+  //This for loop, loops throught the array of users testing to see if the info entered matches one of the saved users
 
   for (let i = 0; i < users.length; i++) {
     if (users[i].username == testName) {
@@ -182,7 +187,7 @@ function authenticate() {
         //Log in is successful and the page displays an alert with their name
 
         $(this).display = "none";
-//Redirect to the Home page
+        //Redirect to the Home page
         window.location = "Home_Page.html";
 
       } else {
@@ -200,26 +205,28 @@ function authenticate() {
 
 }
 
-function addMoviesToLibrary() {
+function addMoviesToLibrary(x) {
 
   //user[].watchlist.push(movieArray[x]);
   console.log("Test");
   console.log("Test");
-  //var str = localStorage.getItem("movieArray");
-  // var parsedArr = JSON.parse(str);
+  console.log(x);
 
-  //moviesArray == parsedArr;
-  //console.log(moviesArray);
-
-
-
-
-  for (let l = 0; l < moviesArray.length; l++) {
-    document.getElementById("library-image" + l).innerHTML = "<img src=" + moviesArray[l].poster + " class='card-img-top' alt'...'>";
-    document.getElementById("library-title" + l).innerHTML = " <h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[l].movieName + " </a></h5> ";
-    document.getElementById("library-btnPlay" + l).innerHTML = " <a href='#' class='btn btn-primary'>Play</a> ";
-    document.getElementById("library-btnAdd" + l).innerHTML = " <a href='#' class='btn btn-primary'>Add</a> ";
-  }
+  //console.log(moviesArray[x].movieName);
+  var strPoster = "<img src=" + moviesArray[t].poster + " width=\"150px\" height=\"225px\"></img>";
+  var str = "<img src=" + moviesArray[x].poster + " width=\"150px\" height=\"225px\"></img>";
+  // document.getElementById("detailed-posterJ").innerHTML(strPoster);
+  $("#detailed-posterJ").append(strPoster);
+  //$("#detailed-movieNameJ").append(moviesArray[x].movieName);
+  $("#detailed-movieNameJ").append("Hello");
+  $("#detailed-YearJ").append(moviesArray[x].year);
+  $("#detailed-directorJ").append(moviesArray[x].director);
+  $("#detailed-actorsJ").append(moviesArray[x].listOfActors);
+  $("#detailed-runtimeJ").append(moviesArray[x].time);
+  $("#detailed-plotJ").append(moviesArray[x].plot);
+  $("#detailed-ratingJ").append(moviesArray[x].rating);
+  $("#detailed-genreJ").append(moviesArray[x].genre);
+  document.getElementById("detailed-movieNameJ").innerHTML = "Hello";
 
 
 
@@ -237,17 +244,8 @@ function showMovies() {
 
   //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
 
-
-
-
-
-
-
-
-
-
   for (let x = 0; x < moviesArray.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addDiv = "<div onclick=\"addMoviesToLibrary(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
   }
 }
