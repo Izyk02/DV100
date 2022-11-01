@@ -206,10 +206,9 @@ function authenticate() {
 }
 
 function addMoviesToLibrary(x) {
-
+//when a user clicks on add to watchlist this code will push the movies name to the array in users
   //user[].watchlist.push(movieArray[x]);
-  console.log("Test");
-  console.log("Test");
+
   console.log(x);
 
   //console.log(moviesArray[x].movieName);
@@ -217,8 +216,8 @@ function addMoviesToLibrary(x) {
   var str = "<img src=" + moviesArray[x].poster + " width=\"150px\" height=\"225px\"></img>";
   // document.getElementById("detailed-posterJ").innerHTML(strPoster);
   $("#detailed-posterJ").append(strPoster);
-  //$("#detailed-movieNameJ").append(moviesArray[x].movieName);
-  $("#detailed-movieNameJ").append("Hello");
+  $("#detailed-movieNameJ").append(moviesArray[x].movieName);
+  //$("#detailed-movieNameJ").append("Hello");
   $("#detailed-YearJ").append(moviesArray[x].year);
   $("#detailed-directorJ").append(moviesArray[x].director);
   $("#detailed-actorsJ").append(moviesArray[x].listOfActors);
@@ -226,7 +225,7 @@ function addMoviesToLibrary(x) {
   $("#detailed-plotJ").append(moviesArray[x].plot);
   $("#detailed-ratingJ").append(moviesArray[x].rating);
   $("#detailed-genreJ").append(moviesArray[x].genre);
-  document.getElementById("detailed-movieNameJ").innerHTML = "Hello";
+ // document.getElementById("detailed-movieNameJ").innerHTML = "Hello";
 
 
 
