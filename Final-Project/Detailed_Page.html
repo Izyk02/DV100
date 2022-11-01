@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Detailed Page</title>
    
     <!-- Favicons -->
@@ -89,30 +89,27 @@
     <div class="detailed-mainBox">
         <div class="detailed-topRow row">
             <div class="detailed-space col-sm-1"></div>
-            <div class="detailed-artwork col-sm-2"><img src="assets\img\Top Gun Maverick.jpg" width="150px" height="225px"></div>
+            <div class="detailed-artwork col-sm-2" id="detailed-posterJ"></div>
             <div class="detailed-space col-sm-1"></div>
-            <div class="detailed-trailer col-sm-7"><img src="assets\img\Top Gun Maverick Trailer.jpg" width="400px" height="225px"></div>
+            <div class="detailed-trailer col-sm-7"></div>
         </div>
 
         <div class="detailed-bottomRow row">
             <div class="detailed-space col-sm-1"></div>
             <div class="detailed-brLeft col-sm-4">
-                <div class="detailed-movieName"><h1>Top Gun Maverick</h1></div>
-                <div class="detailed-year"><p>2022</p></div>
-                <div class="detailed-director"><h3>Joseph Kosinski</h3></div>
-                <div class="detailed-actors">
-                    <h3><u>List of actors</u></h3>
-                    <ol>
-                        <li>Tom Cruise</li>
-                        <li>Jennifer Connelly</li>
-                        <li>Miles Teller</li>
-                    </ol>
+                <div class="detailed-movieName" ><h1 id="detailed-movieNameJ"></h1></div>
+                <div class="detailed-year" ><p id="detailed-YearJ"></p></div>
+                <div class="detailed-director" ><h3 id="detailed-directorJ"></h3></div>
+                <div class="detailed-actors" >
+                    <h3 ><u>List of actors</u></h3>
+                 <p id="detailed-actorsJ"></p>
                 </div>
             </div>
             <div class="detailed-brRight col-sm-6">
-                <div class="detailed-time"><p>120mins</p></div>
-                <div class="detailed-synopsis"><p>After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.</p></div>
-                <div class="detailed-rating"><p>*****</p></div>
+                <div class="detailed-time"  ><p id="detailed-runtimeJ"></p></div>
+                <div class="detailed-synopsis" ><p id="detailed-plotJ"></p></div>
+                <div class="detailed-rating" ><p id="detailed-ratingJ">dbf</p></div>
+                <div class="detailed-rating" ><p id="detailed-genreJ">*****</p></div>
             </div>
         </div>
         <div><button class="detailed-button" type="submit">Add to Watchlist +</button></div>
