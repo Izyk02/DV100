@@ -11,27 +11,27 @@ var users = [
   {
     username: "Antonio",
     password: "1234",
-    watchlist: [""]
+    watchlist: []
   },
   {
     username: "Erik",
     password: "1234",
-    watchlist: [""]
+    watchlist: []
   },
   {
     username: "Enrique",
     password: "1234",
-    watchlist: [""]
+    watchlist: []
   },
   {
     username: "Skyler",
     password: "1234",
-    watchlist: [""]
+    watchlist: []
   },
   {
     username: "Emily",
     password: "1234",
-    watchlist: [""]
+    watchlist: []
   }
 ]
 //This array will store all 25 movies when the API calls them
@@ -107,14 +107,14 @@ function loadMovieContent() {
 
 
 }
-function loadOnHome(){
+function loadOnHome() {
   loadMovieContent();
   document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
-document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
 
-$('.carousel').carousel(cycle)({
-  interval: 2000
-})
+  $('.carousel').carousel(cycle)({
+    interval: 2000
+  })
 }
 
 
@@ -187,7 +187,7 @@ function authenticate() {
       if (users[i].password == testPassword) {
         sessionStorage.setItem("sName", testName);
         sessionStorage.setItem("sPass", testPassword);
-       
+
 
 
 
@@ -215,31 +215,58 @@ function authenticate() {
   }
 
 }
-
-function addMoviesToLibrary(x) {
-//when a user clicks on add to watchlist this code will push the movies name to the array in users
-  //user[].watchlist.push(movieArray[x]);
-
+function addMoviesToLibraryS(x) {
+  sessionStorage.setItem("selectedMovie", x);
   console.log(x);
+  //var t = sessionStorage.getItem("selectedMovie");
+  //console.log("t ="+t);
+}
+function addMoviesToLibrary(t) {
+  //when a user clicks on a movie it adds the movie info to the detailed page
 
-  //console.log(moviesArray[x].movieName);
+  //First calling the saved data
+  var str = localStorage.getItem("mArray");
+
+  var parsedArr = JSON.parse(str);
+
+  moviesArray = parsedArr;
+
+  //Displaying the data
+  //console.log(moviesArray[t].movieName);
   var strPoster = "<img src=" + moviesArray[t].poster + " width=\"150px\" height=\"225px\"></img>";
-  var str = "<img src=" + moviesArray[x].poster + " width=\"150px\" height=\"225px\"></img>";
-  // document.getElementById("detailed-posterJ").innerHTML(strPoster);
+
   $("#detailed-posterJ").append(strPoster);
-  $("#detailed-movieNameJ").append(moviesArray[x].movieName);
-  //$("#detailed-movieNameJ").append("Hello");
-  $("#detailed-YearJ").append(moviesArray[x].year);
-  $("#detailed-directorJ").append(moviesArray[x].director);
-  $("#detailed-actorsJ").append(moviesArray[x].listOfActors);
-  $("#detailed-runtimeJ").append(moviesArray[x].time);
-  $("#detailed-plotJ").append(moviesArray[x].plot);
-  $("#detailed-ratingJ").append(moviesArray[x].rating);
-  $("#detailed-genreJ").append(moviesArray[x].genre);
- // document.getElementById("detailed-movieNameJ").innerHTML = "Hello";
+  $("#detailed-movieNameJ").append(moviesArray[t].movieName);
+  $("#detailed-YearJ").append(moviesArray[t].year);
+  $("#detailed-directorJ").append(moviesArray[t].director);
+  $("#detailed-actorsJ").append(moviesArray[t].listOfActors);
+  $("#detailed-runtimeJ").append(moviesArray[t].time);
+  $("#detailed-plotJ").append(moviesArray[t].plot);
+  $("#detailed-ratingJ").append(moviesArray[t].rating);
+  $("#detailed-genreJ").append(moviesArray[t].genre);
 
 
+}
+function addToWatchlist(){
+  var tempName = sessionStorage.getItem("sName");
+  var movieToAdd = sessionStorage.getItem("selectedMovie");
+  var pos;
+  console.log(tempName);
 
+  for(let u = 0; u < users.length; u ++){
+    if(users[u].username == tempName){
+      pos = u;
+    }  console.log(pos);
+  }
+
+  users[pos].watchlist.push(movieToAdd);
+  console.log(users);
+}
+function detailedPage() {
+  //This function runs when the deatailed page loads and gets the stored selected movie
+  var t = sessionStorage.getItem("selectedMovie");
+  console.log("t =" + t);
+  addMoviesToLibrary(t);
 }
 function showMovies() {
 
@@ -255,7 +282,7 @@ function showMovies() {
   //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
 
   for (let x = 0; x < moviesArray.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibrary(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
   }
 }

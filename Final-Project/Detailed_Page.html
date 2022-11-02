@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <title>Detailed Page</title>
    
     <!-- Favicons -->
@@ -24,7 +25,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
   
 </head>
-<body class="detailed-body">
+<body class="detailed-body" onload="detailedPage()">
     <!--Navbar-->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
@@ -100,20 +101,20 @@
             <div class="detailed-brLeft col-sm-4">
                 <div class="detailed-movieName" ><h1 id="detailed-movieNameJ"></h1></div>
                 <div class="detailed-year" ><p id="detailed-YearJ"></p></div>
-                <div class="detailed-director" ><h3 id="detailed-directorJ"></h3></div>
+                <div class="detailed-director" ><h3 id="detailed-directorJ">Director: </h3></div>
                 <div class="detailed-actors" >
-                    <h3 ><u>List of actors</u></h3>
+                    <h3 >List of actors</h3>
                  <p id="detailed-actorsJ"></p>
                 </div>
             </div>
             <div class="detailed-brRight col-sm-6">
-                <div class="detailed-time"  ><p id="detailed-runtimeJ"></p></div>
+                <div class="detailed-time"  ><p id="detailed-runtimeJ">Runtime: </p></div>
                 <div class="detailed-synopsis" ><p id="detailed-plotJ"></p></div>
-                <div class="detailed-rating" ><p id="detailed-ratingJ">dbf</p></div>
-                <div class="detailed-rating" ><p id="detailed-genreJ">*****</p></div>
+                <div class="detailed-rating" ><p id="detailed-ratingJ">Rating: </p></div>
+                <div class="detailed-rating" ><p id="detailed-genreJ">Genre: </p></div>
             </div>
         </div>
-        <div><button class="detailed-button" type="submit">Add to Watchlist +</button></div>
+        <div><button onclick="addToWatchlist()" class="detailed-button" type="submit">Add to Watchlist +</button></div>
     </div>
 
 
