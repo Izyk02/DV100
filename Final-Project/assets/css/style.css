@@ -591,6 +591,11 @@ body {
 
 /*-------------------------------------Filter Dropdown Menu CSS START*/
 
+.fl-buttons {
+  min-width: 5em;
+  position: relative;
+}
+
 .fl-dropdown {
   min-width: 4em;
   position: relative;

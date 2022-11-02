@@ -16,7 +16,7 @@ var users = [
   {
     username: "Erik",
     password: "1234",
-    watchlist: [15,3,6]
+    watchlist: [15, 3, 6]
   },
   {
     username: "Enrique",
@@ -190,6 +190,7 @@ function signUp() {
   //Here the information is also sent to session storage so that the Home Page can display the person's name
   sessionStorage.setItem("sName", localName);
   sessionStorage.setItem("sPass", localPass);
+
   //Here we hide the sign in page and show the Home Page
   $(this).display = "none";
   window.location = "Home_Page.html";
@@ -293,7 +294,17 @@ function addToWatchlist() {
     } console.log(pos);
   }
 
-  users[pos].watchlist.push(movieToAdd);
+  //users[pos].watchlist.push(movieToAdd);
+
+  const addmovie = [movieToAdd];
+
+  addmovie.push()
+
+  users[pos].watchlist.push(...addmovie);
+
+
+
+
   console.log(users);
   alert("Movie added to watchlist!");
 }
@@ -322,13 +333,13 @@ function showMovies() {
     $("#movies").append(addDiv);
   }
 }
-function loadWatchlist(){
+function loadWatchlist() {
   var str = localStorage.getItem("mArray");
 
   var parsedArr = JSON.parse(str);
- 
+
   moviesArray = parsedArr;
- 
+
   var pos;
   var tempName = sessionStorage.getItem("sName");
   for (let u = 0; u < users.length; u++) {
@@ -340,8 +351,173 @@ function loadWatchlist(){
     var mviePos = users[pos].watchlist[x];
     console.log(moviesArray[mviePos].movieName);
 
-  
+
     var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[mviePos].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[mviePos].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#watchlist-content").append(addDiv);
   }
 }
+
+/* DROPDOWN JAVASCRIP ERIK BEGIN */
+function LoadFilter() {
+
+  const dropdowns = document.querySelectorAll('.fl-dropdown');
+
+  dropdowns.forEach(dropdown => {
+
+    const select = dropdown.querySelector('.fl-select');
+    const caret = dropdown.querySelector('.fl-caret');
+    const menu = dropdown.querySelector('.fl-menu');
+    const options = dropdown.querySelectorAll('.fl-menu li');
+    const selected = dropdown.querySelector('.fl-selected');
+
+
+    select.addEventListener('click', () => {
+
+      select.classList.toggle('fl-select-clicked');
+
+      caret.classList.toggle('fl-caret-rotate');
+
+      menu.classList.toggle('fl-menu-open');
+
+    });
+
+
+    options.forEach(option => {
+
+      option.addEventListener('click', () => {
+
+        selected.innerText = option.innerText;
+
+        select.classList.remove('fl-select-clicked');
+
+        caret.classList.remove('fl-caret-rotate');
+
+        menu.classList.remove('fl-menu-open');
+
+        options.forEach(option => {
+          option.classList.remove('fl-active');
+        });
+
+        option.classList.add('fl-active');
+
+
+      });
+    });
+  });
+
+  $("#fl-all").click(function () {
+    $("#movies").text("");
+    showMovies();
+    $(".fl-genre").text("Genre");
+    $(".fl-year").text("Year");
+    $(".fl-rating").text("Rating");
+  })
+
+
+  $("#FilterContent").click(function () {
+
+    $("#movies").text("");
+
+    var genreselect = $(".fl-genre").text();
+    var yearselect = $(".fl-year").text();
+    var ratingselect = $(".fl-rating").text();
+
+    switch (yearselect) {
+
+      case "Year":
+        yearstart = 0;
+        yearend = 2022;
+        break;
+      case "2015-Now":
+        yearstart = 2015;
+        yearend = 2022;
+        break;
+      case "2010-2015":
+        yearstart = 2010;
+        yearend = 2015;
+        break;
+      case "2005-2010":
+        yearstart = 2005;
+        yearend = 2010;
+        break;
+      case "2000-2005":
+        yearstart = 2000;
+        yearend = 2005;
+        break;
+      case "Older then 1999":
+        yearstart = 0;
+        yearend = 1999;
+        break;
+
+    }
+
+    switch (ratingselect) {
+
+      case "Rating":
+        ratingstart = 10;
+        ratingend = 0;
+        break;
+      case "10-7":
+        ratingstart = 10;
+        ratingend = 7;
+        break;
+      case "6-4":
+        ratingstart = 6;
+        ratingend = 4;
+        break;
+      case "3-0":
+        ratingstart = 3;
+        ratingend = 0;
+        break;
+
+    }
+
+    if (genreselect == "Genre") {
+      genre = "";
+    } else {
+      genre = genreselect;
+    }
+
+    console.log(genre);
+    console.log(yearstart, yearend);
+    console.log(ratingstart, ratingend);
+
+
+    //This code displays the movies on the library page by adding info to a default div 25 times
+    var str = localStorage.getItem("mArray");
+
+    var parsedArr = JSON.parse(str);
+    //console.log(parsedArr);
+    moviesArray = parsedArr;
+
+    console.log("showMoviesRuns");
+    console.log(moviesArray);
+
+    for (let x = 0; x < moviesArray.length; x++) {
+
+      //(includedgenre === true) && (yearstart < moviesArray[x].year < yearend) && (ratingstart <  moviesArray[x].rating < ratingend)
+
+      let filtermoviegenre = moviesArray[x].genre;
+      let includedgenre = filtermoviegenre.includes(genre);
+      let yearresult =  moviesArray[x].year <= yearend && moviesArray[x].year >= yearstart  ;
+      let ratingresult = moviesArray[x].rating <= ratingstart && moviesArray[x].rating > ratingend ;
+      
+      console.log(yearresult)
+
+      if ( (includedgenre === true) && (yearresult === true) && (ratingresult === true)) {
+        var FilterDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+        $("#movies").append(FilterDiv);
+      }
+
+      console.log(parseInt(moviesArray[x].year))
+    }
+
+    
+  });
+
+
+
+};
+
+
+/* DROPDOWN JAVASCRIP ERIK END */

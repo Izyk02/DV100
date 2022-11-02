@@ -30,7 +30,7 @@
 
 </head>
 
-<body onload="showMovies()">
+<body onload="showMovies(),LoadFilter()">
     <!--Navbar-->
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -91,15 +91,15 @@
     <div class="container-fluid" style="border-bottom:3px solid white ;">
         <div class="row" id="row-filter">
             <div class="col-sm-2"></div>
-            <div class="col-sm-4 filter-title">
+            <div class="col-sm-3 filter-title">
                 <h1 style="color: white; ">Movie Library</h1>
             </div>
 
             <!--All-Filter-->
             <div class="col-sm-1">
-                <div class="fl-dropdown">
+                <div class="fl-buttons" id="fl-all">
                     <div class="fl-select">
-                        <span class="fl-selected">All</span>
+                        <span>All</span>
                     </div>
                 </div>
             </div>
@@ -108,14 +108,14 @@
             <div class="col-sm-1">
                 <div class="fl-dropdown">
                     <div class="fl-select">
-                        <span class="fl-selected">Genre</span>
+                        <span class="fl-selected fl-genre">Genre</span>
                         <div class="fl-caret"></div>
                     </div>
                     <ul class="fl-menu">
                         <li>Action</li>
                         <li>Romance</li>
                         <li>Adventure</li>
-                        <li class="fl-active">Sci-Fi</li>
+                        <li>Sci-Fi</li>
                         <li>Fantasy</li>
                     </ul>
                 </div>
@@ -125,14 +125,14 @@
             <div class="col-sm-1">
                 <div class="fl-dropdown">
                     <div class="fl-select">
-                        <span class="fl-selected">Year</span>
+                        <span class="fl-selected fl-year">Year</span>
                         <div class="fl-caret"></div>
                     </div>
                     <ul class="fl-menu">
                         <li>2015-Now</li>
                         <li>2010-2015</li>
                         <li>2005-2010</li>
-                        <li class="fl-active">2000-2005</li>
+                        <li>2000-2005</li>
                         <li>Older then 1999</li>
                     </ul>
                 </div>
@@ -142,22 +142,29 @@
             <div class="col-sm-1">
                 <div class="fl-dropdown">
                     <div class="fl-select">
-                        <span class="fl-selected">Imdb Score</span>
+                        <span class="fl-selected fl-rating">Rating</span>
                         <div class="fl-caret"></div>
                     </div>
                     <ul class="fl-menu">
                         <li>10-7</li>
                         <li>6-4</li>
-                        <li class="fl-active">3-0</li>
+                        <li>3-0</li>
                     </ul>
+                </div>
+            </div>
+
+            <!--Filter-Button-->
+            <div class="col-sm-1">
+                <div class="fl-buttons" id="FilterContent" >
+                    <div class="fl-select" style="background-color: #7478f3;">
+                        <span >Filter</span>
+                    </div>
                 </div>
             </div>
 
 
         </div>
     </div>
-
-    <script src="assets\js\filter.js"></script>
 
     <!--Movie List-->
 
