@@ -486,9 +486,6 @@ function LoadFilter() {
     //console.log(parsedArr);
     moviesArray = parsedArr;
 
-    console.log("showMoviesRuns");
-    console.log(moviesArray);
-
     for (let x = 0; x < moviesArray.length; x++) {
 
       //(includedgenre === true) && (yearstart < moviesArray[x].year < yearend) && (ratingstart <  moviesArray[x].rating < ratingend)
@@ -498,14 +495,11 @@ function LoadFilter() {
       let yearresult =  moviesArray[x].year <= yearend && moviesArray[x].year >= yearstart  ;
       let ratingresult = moviesArray[x].rating <= ratingstart && moviesArray[x].rating > ratingend ;
       
-      console.log(yearresult)
-
       if ( (includedgenre === true) && (yearresult === true) && (ratingresult === true)) {
         var FilterDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
         $("#movies").append(FilterDiv);
       }
 
-      console.log(parseInt(moviesArray[x].year))
     }
 
     

@@ -693,16 +693,22 @@ body {
 }
 
 .card-title {
+  white-space: nowrap;
   color: white;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-img-top {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .card-body {
+  height: 110px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #141414;
@@ -713,10 +719,14 @@ body {
 .movie-card {
   border-radius: 5px;
   box-shadow: 0 0 10px 1px #34f8ff;
+  min-height: 180px;
 
 }
 
 .btn-primary {
+  position: relative;
+  margin-right: 15px;
+  float: left;
   height: 35px;
   color: white;
   font-family: "Roboto", sans-serif;
