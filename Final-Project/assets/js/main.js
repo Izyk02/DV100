@@ -247,16 +247,17 @@ function addMoviesToLibrary(t) {
 
 
 }
-function addToWatchlist(){
+
+function addToWatchlist() {
   var tempName = sessionStorage.getItem("sName");
   var movieToAdd = sessionStorage.getItem("selectedMovie");
   var pos;
   console.log(tempName);
 
-  for(let u = 0; u < users.length; u ++){
-    if(users[u].username == tempName){
+  for (let u = 0; u < users.length; u++) {
+    if (users[u].username == tempName) {
       pos = u;
-    }  console.log(pos);
+    } console.log(pos);
   }
 
   users[pos].watchlist.push(movieToAdd);
@@ -270,7 +271,7 @@ function detailedPage() {
 }
 function showMovies() {
 
-  //console.log(moviesArray[4].year);
+  //This code displays the movies on the library page by adding info to a default div 25 times
   var str = localStorage.getItem("mArray");
 
   var parsedArr = JSON.parse(str);
@@ -284,5 +285,20 @@ function showMovies() {
   for (let x = 0; x < moviesArray.length; x++) {
     var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
+  }
+}
+function loadWatchlist(){
+  var pos;
+  var tempName = sessionStorage.getItem("sName");
+  for (let u = 0; u < users.length; u++) {
+    if (users[u].username == tempName) {
+      pos = u;
+    } console.log("watchlist for user at: " + pos);
+  }
+  for (let x = 0; x < users[pos].watchlist.length; x++) {
+    var mviePos = watchlist[0];
+  
+    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[mviePos].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[mviePos].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    $("#watchlist-content").append(addDiv);
   }
 }
