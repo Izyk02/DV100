@@ -109,6 +109,12 @@ function loadMovieContent() {
 }
 
 function loadOnHome() {
+
+  $('.carousel').carousel({
+    interval: 2000
+  })
+
+
   loadMovieContent();
 
   var jsonWatchlistArr = JSON.stringify(localWatchlist);
@@ -344,7 +350,7 @@ function showMovies() {
   //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
 
   for (let x = 0; x < moviesArray.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
   }
 }

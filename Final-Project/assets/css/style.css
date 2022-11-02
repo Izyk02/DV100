@@ -591,6 +591,16 @@ body {
 
 /*-------------------------------------Filter Dropdown Menu CSS START*/
 
+.c-item {
+  height: 480px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
 .fl-buttons {
   min-width: 5em;
   position: relative;
@@ -771,8 +781,12 @@ body {
 }
 #signIn-welcomeTextStyle{
   color: white;
-  margin-left: 560px;
-  font-size: 15px;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 .signIn-Indiv {
   background-color: rgb(255, 255, 255);
