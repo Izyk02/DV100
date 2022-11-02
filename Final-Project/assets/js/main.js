@@ -306,6 +306,7 @@ function addToWatchlist() {
 
 
   console.log(users);
+  alert("Movie added to watchlist!");
 }
 
 function detailedPage() {
