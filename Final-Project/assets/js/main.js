@@ -218,12 +218,6 @@ function authenticate() {
       if (users[i].password == testPassword) {
         sessionStorage.setItem("sName", testName);
         sessionStorage.setItem("sPass", testPassword);
-
-
-
-
-
-
         loginState == true;
         alert("Welcome back, " + sessionStorage.getItem("sName") + "!");
         //Log in is successful and the page displays an alert with their name
@@ -280,6 +274,8 @@ function addMoviesToLibrary(t) {
 }
 
 function addToWatchlist() {
+
+//This function 
   var tempName = sessionStorage.getItem("sName");
   var movieToAdd = sessionStorage.getItem("selectedMovie");
   localWatchlist.push(movieToAdd);
