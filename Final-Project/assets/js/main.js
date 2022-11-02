@@ -110,12 +110,6 @@ function loadMovieContent() {
 
 function loadOnHome() {
   loadMovieContent();
-  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
-  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
-
-  $('.carousel').carousel({
-    interval: 2000
-  })
 
   //console.log(moviesArray[4].year);
   var str = localStorage.getItem("mArray");
@@ -136,8 +130,20 @@ function loadOnHome() {
     var addDiv = "<div onclick=\"addMoviesToLibraryS(" + top_rated_movies[x] + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[top_rated_movies[x]].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[top_rated_movies[x]].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#top_rated_movies_add").append(addDiv);
   }
+
+}
+ 
+function cycle(){
+  $('.carousel').carousel('cycle')
 }
 
+function prev_slide(){
+  $('.carousel').carousel('next')
+}
+
+function next_slide(){
+  $('.carousel').carousel('next')
+}
 
 
 

@@ -94,9 +94,9 @@
   <!--End of navbar-->
 
   <div class="col-md-12 signIn-welcomeText"></div>
-  
+
   <!--Carousel final-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" onclick="cycle()">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -113,11 +113,12 @@
         <img class="d-block w-100" src="assets/img/Slider_Images/interstellar-movie-movies-wallpaper-preview.jpg" alt="Third slide">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <!--Controls-->
+    <a class="carouselExampleIndicators" onclick="prev_slide()" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next" onclick="next_slide()" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
