@@ -295,6 +295,7 @@ function addToWatchlist() {
 
   users[pos].watchlist.push(movieToAdd);
   console.log(users);
+  alert("Movie added to watchlist!");
 }
 
 function detailedPage() {
