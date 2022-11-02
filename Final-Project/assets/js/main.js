@@ -263,6 +263,7 @@ function addToWatchlist() {
   users[pos].watchlist.push(movieToAdd);
   console.log(users);
 }
+
 function detailedPage() {
   //This function runs when the deatailed page loads and gets the stored selected movie
   var t = sessionStorage.getItem("selectedMovie");
