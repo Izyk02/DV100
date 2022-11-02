@@ -36,7 +36,7 @@ var users = [
 ]
 //This array will store all 25 movies when the API calls them
 var moviesArray = [];
-
+var localWatchlist = [];
 
 
 function loadMovieContent() {
@@ -110,6 +110,11 @@ function loadMovieContent() {
 
 function loadOnHome() {
   loadMovieContent();
+  
+   $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome back, " + sessionStorage.getItem("sName") + "! We hope you are having an awesome day!</h4>");
+ 
+   
+  
   document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
   document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
 
@@ -272,6 +277,9 @@ function addMoviesToLibrary(t) {
 function addToWatchlist() {
   var tempName = sessionStorage.getItem("sName");
   var movieToAdd = sessionStorage.getItem("selectedMovie");
+  localWatchlist.push(movieToAdd);
+  localStorage.setItem("watching",localWatchlist);
+  var tempW = localStorage.getItem("watching")
   var pos;
   console.log(tempName);
 
