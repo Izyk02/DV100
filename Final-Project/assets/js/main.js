@@ -16,7 +16,7 @@ var users = [
   {
     username: "Erik",
     password: "1234",
-    watchlist: []
+    watchlist: [15,3,6]
   },
   {
     username: "Enrique",
@@ -289,6 +289,12 @@ function showMovies() {
   }
 }
 function loadWatchlist(){
+  var str = localStorage.getItem("mArray");
+
+  var parsedArr = JSON.parse(str);
+ 
+  moviesArray = parsedArr;
+ 
   var pos;
   var tempName = sessionStorage.getItem("sName");
   for (let u = 0; u < users.length; u++) {
@@ -297,7 +303,9 @@ function loadWatchlist(){
     } console.log("watchlist for user at: " + pos);
   }
   for (let x = 0; x < users[pos].watchlist.length; x++) {
-    var mviePos = watchlist[0];
+    var mviePos = users[pos].watchlist[x];
+    console.log(moviesArray[mviePos].movieName);
+
   
     var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[mviePos].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[mviePos].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#watchlist-content").append(addDiv);
