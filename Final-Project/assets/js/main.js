@@ -5,7 +5,7 @@
 //They are sourced from IMDB
  616eae0379b3813cf7f93ebb40e44a1c355e00db*/
 
-var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+var moviesListed = ["tt0107290", "tt0816692", "tt0245429", "tt0068646", "tt0424774", "tt0076759", "tt0114709", "tt1877830", "tt0800369", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
 //This users array stores the list of watchlist movies as well as login info
 var users = [
   {
@@ -16,7 +16,7 @@ var users = [
   {
     username: "Erik",
     password: "1234",
-    watchlist: []
+    watchlist: [15,3,6]
   },
   {
     username: "Enrique",
@@ -268,21 +268,23 @@ function addMoviesToLibrary(t) {
 
 
 }
-function addToWatchlist(){
+
+function addToWatchlist() {
   var tempName = sessionStorage.getItem("sName");
   var movieToAdd = sessionStorage.getItem("selectedMovie");
   var pos;
   console.log(tempName);
 
-  for(let u = 0; u < users.length; u ++){
-    if(users[u].username == tempName){
+  for (let u = 0; u < users.length; u++) {
+    if (users[u].username == tempName) {
       pos = u;
-    }  console.log(pos);
+    } console.log(pos);
   }
 
   users[pos].watchlist.push(movieToAdd);
   console.log(users);
 }
+
 function detailedPage() {
   //This function runs when the deatailed page loads and gets the stored selected movie
   var t = sessionStorage.getItem("selectedMovie");
@@ -291,7 +293,7 @@ function detailedPage() {
 }
 function showMovies() {
 
-  //console.log(moviesArray[4].year);
+  //This code displays the movies on the library page by adding info to a default div 25 times
   var str = localStorage.getItem("mArray");
 
   var parsedArr = JSON.parse(str);
@@ -305,5 +307,28 @@ function showMovies() {
   for (let x = 0; x < moviesArray.length; x++) {
     var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
+  }
+}
+function loadWatchlist(){
+  var str = localStorage.getItem("mArray");
+
+  var parsedArr = JSON.parse(str);
+ 
+  moviesArray = parsedArr;
+ 
+  var pos;
+  var tempName = sessionStorage.getItem("sName");
+  for (let u = 0; u < users.length; u++) {
+    if (users[u].username == tempName) {
+      pos = u;
+    } console.log("watchlist for user at: " + pos);
+  }
+  for (let x = 0; x < users[pos].watchlist.length; x++) {
+    var mviePos = users[pos].watchlist[x];
+    console.log(moviesArray[mviePos].movieName);
+
+  
+    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[mviePos].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[mviePos].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    $("#watchlist-content").append(addDiv);
   }
 }
