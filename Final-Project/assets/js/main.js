@@ -107,13 +107,16 @@ function loadMovieContent() {
 
 
 }
-
-document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
+function loadOnHome(){
+  loadMovieContent();
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
 document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
 
 $('.carousel').carousel(cycle)({
   interval: 2000
 })
+}
+
 
 
 
@@ -184,7 +187,7 @@ function authenticate() {
       if (users[i].password == testPassword) {
         sessionStorage.setItem("sName", testName);
         sessionStorage.setItem("sPass", testPassword);
-        sessionStorage.setItem("sStatus", "yes");
+       
 
 
 
