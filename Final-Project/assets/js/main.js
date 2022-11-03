@@ -37,7 +37,7 @@ var users = [
 //This array will store all 25 movies when the API calls them
 var moviesArray = [25];
 var localWatchlist = [];
-
+var count = 0;
 
 function loadMovieContent() {
   //This function is called in order to retrieve the  25 movies then save them using JSON into the Local Storage
@@ -63,6 +63,7 @@ function loadMovieContent() {
       //These Temporary variables store the movie information
       console.log(response);
       var dir = response.Director;
+      
       var name = response.Title;
       var act = response.Actors;
       var img = response.Poster;
@@ -104,7 +105,7 @@ function loadMovieContent() {
 
 
 
-
+count++;
 
 }
 
@@ -114,8 +115,9 @@ function loadOnHome() {
     interval: 2000
   })
 
+  loadMovieContent();
 
-  //loadMovieContent();
+
 
   var jsonWatchlistArr = JSON.stringify(localWatchlist);
   localStorage.setItem("wArray", jsonWatchlistArr);
@@ -128,6 +130,7 @@ function loadOnHome() {
   var parsedArr = JSON.parse(str);
   //console.log(parsedArr);
   moviesArray = parsedArr;
+  console.log(moviesArray);
   for (let x = 0; x < 4; x++) {
     var addFeature = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col-sm-3\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#featured_movies_add").append(addFeature);
