@@ -88,6 +88,7 @@ function loadMovieContent() {
       //Here the temporary onj is sent to be added to the movie array
      // console.log(tempObj);
       moviesArray.push(tempObj);
+      console.log(moviesArray);
 
       //console.log(moviesArray[i]);
 
