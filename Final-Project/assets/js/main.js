@@ -5,7 +5,7 @@
 //They are sourced from IMDB
  616eae0379b3813cf7f93ebb40e44a1c355e00db*/
 
-var moviesListed = ["tt0107290", "tt0816692", "tt0245429", "tt0068646", "tt0424774", "tt0076759", "tt0114709", "tt1877830", "tt0800369", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
 //This users array stores the list of watchlist movies as well as login info
 var users = [
   {
@@ -35,9 +35,14 @@ var users = [
   }
 ]
 //This array will store all 25 movies when the API calls them
-var moviesArray = [25];
+var moviesArray = [];
+<<<<<<< HEAD
 var localWatchlist = [];
+var count = 0;
+=======
 
+
+>>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
 function loadMovieContent() {
   //This function is called in order to retrieve the  25 movies then save them using JSON into the Local Storage
@@ -61,8 +66,9 @@ function loadMovieContent() {
 
     $.ajax(settings).done(function (response) {
       //These Temporary variables store the movie information
-      console.log(response);
+     // console.log(response);
       var dir = response.Director;
+
       var name = response.Title;
       var act = response.Actors;
       var img = response.Poster;
@@ -85,6 +91,8 @@ function loadMovieContent() {
         genre: gen
       }
       //Here the temporary onj is sent to be added to the movie array
+      console.log("jcbjw");
+     console.log(tempObj);
       moviesArray.push(tempObj);
 
       //console.log(moviesArray[i]);
@@ -97,7 +105,7 @@ function loadMovieContent() {
   //saving the info, so this time function waits 5 seconds before loading the info into the array to make sure
   //the info is there and that the API has had enough time to call it before we try and save it.
   setTimeout(function () { var jsonArr = JSON.stringify(moviesArray); localStorage.setItem("mArray", jsonArr); }, 5000);
-
+//console.log(moviesArray);
   // var str = localStorage.getItem("mArray");
   //var parsedArr = JSON.parse(str);
 
@@ -105,17 +113,18 @@ function loadMovieContent() {
 
 
 
-
 }
-
 function loadOnHome() {
+  loadMovieContent();
+<<<<<<< HEAD
 
-  $('.carousel').carousel({
+  /*$('.carousel').carousel({
     interval: 2000
-  })
+  })*/
 
 
-  //loadMovieContent();
+
+
 
   var jsonWatchlistArr = JSON.stringify(localWatchlist);
   localStorage.setItem("wArray", jsonWatchlistArr);
@@ -128,6 +137,7 @@ function loadOnHome() {
   var parsedArr = JSON.parse(str);
   //console.log(parsedArr);
   moviesArray = parsedArr;
+  console.log(moviesArray);
   for (let x = 0; x < 4; x++) {
     var addFeature = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col-sm-3\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#featured_movies_add").append(addFeature);
@@ -155,6 +165,16 @@ function prev_slide() {
 function next_slide() {
   $('.carousel').carousel('next')
 }
+=======
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
+
+  $('.carousel').carousel(cycle)({
+    interval: 2000
+  })
+}
+
+>>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
 
 
@@ -282,6 +302,13 @@ function addMoviesToLibrary(t) {
 }
 
 function addToWatchlist() {
+<<<<<<< HEAD
+=======
+  var tempName = sessionStorage.getItem("sName");
+  var movieToAdd = sessionStorage.getItem("selectedMovie");
+  var pos;
+  console.log(tempName);
+>>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
   //This function adds the movie selected to a watchlist stored on the loacl storage for the user
 
