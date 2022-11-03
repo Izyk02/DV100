@@ -111,6 +111,12 @@ function loadMovieContent() {
 }
 function loadOnHome() {
   loadMovieContent();
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
+
+  $('.carousel').carousel({
+    interval: 2000
+  })
 
   /*$('.carousel').carousel({
     interval: 2000
