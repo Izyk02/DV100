@@ -5,7 +5,7 @@
 //They are sourced from IMDB
  616eae0379b3813cf7f93ebb40e44a1c355e00db*/
 
-var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+var moviesListed = ["tt0107290", "tt0816692", "tt0245429", "tt0068646", "tt0424774", "tt0076759", "tt0114709", "tt1877830", "tt0800369", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
 //This users array stores the list of watchlist movies as well as login info
 var users = [
   {
@@ -86,8 +86,7 @@ function loadMovieContent() {
         genre: gen
       }
       //Here the temporary onj is sent to be added to the movie array
-      console.log("jcbjw");
-     console.log(tempObj);
+     // console.log(tempObj);
       moviesArray.push(tempObj);
 
       //console.log(moviesArray[i]);
@@ -109,18 +108,12 @@ function loadMovieContent() {
 
 
 }
+
 function loadOnHome() {
   loadMovieContent();
-  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
-  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
-
   $('.carousel').carousel({
     interval: 2000
   })
-
-  /*$('.carousel').carousel({
-    interval: 2000
-  })*/
 
 
 
@@ -165,17 +158,6 @@ function prev_slide() {
 function next_slide() {
   $('.carousel').carousel('next')
 }
-  var featured_movies=[1,2,3,4]
-  for (let x = 0; x < featured_movies.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + featured_movies[x] + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[featured_movies[x]].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[featured_movies[x]].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
-    $("#featured_movies_add").append(addDiv);
-  }
-//top rated movies
-  var top_rated_movies=[5,6,7,8]
-  for (let x = 0; x < top_rated_movies.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + top_rated_movies[x] + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[top_rated_movies[x]].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[top_rated_movies[x]].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
-    $("#top_rated_movies_add").append(addDiv);
-  }
 
 
 
