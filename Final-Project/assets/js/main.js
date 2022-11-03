@@ -348,7 +348,7 @@ function showMovies() {
   //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
 
   for (let x = 0; x < moviesArray.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
   }
 }
@@ -358,6 +358,12 @@ function loadWatchlist() {
   var parsedArr = JSON.parse(str);
 
   localWatchlist = parsedArr;
+  console.log(localWatchlist);
+  var str = localStorage.getItem("mArray");
+
+  var parsedArr = JSON.parse(str);
+  //console.log(parsedArr);
+  moviesArray = parsedArr;
   for (let x = 0; x < localWatchlist.length; x++) {
     var mviePos = localWatchlist[x];
 
@@ -436,7 +442,7 @@ function LoadFilter() {
   $("#FilterContent").click(function () {
 
     $("#movies").text("");
-
+    //Here we get the selected values from the filter that the user wants to gets
     var genreselect = $(".fl-genre").text();
     var yearselect = $(".fl-year").text();
     var ratingselect = $(".fl-rating").text();
@@ -497,9 +503,9 @@ function LoadFilter() {
       genre = genreselect;
     }
 
-    console.log(genre);
-    console.log(yearstart, yearend);
-    console.log(ratingstart, ratingend);
+    // console.log(genre);
+    // console.log(yearstart, yearend);
+    //console.log(ratingstart, ratingend);
 
 
     //This code displays the movies on the library page by adding info to a default div 25 times
@@ -511,14 +517,18 @@ function LoadFilter() {
 
     for (let x = 0; x < moviesArray.length; x++) {
 
-      //(includedgenre === true) && (yearstart < moviesArray[x].year < yearend) && (ratingstart <  moviesArray[x].rating < ratingend)
 
+      //Gets genres
       let filtermoviegenre = moviesArray[x].genre;
+      //Is the genre that was selected in the list of genres in the moviesArray Genre field
       let includedgenre = filtermoviegenre.includes(genre);
+      //Checks to see if the year in moviesArray.year falls in the range selected
       let yearresult = moviesArray[x].year <= yearend && moviesArray[x].year >= yearstart;
+      //Checks to see if the year in moviesArray.year falls in the range selected
       let ratingresult = moviesArray[x].rating <= ratingstart && moviesArray[x].rating > ratingend;
-
+      //Checks to see if the rating in moviesArray.rating falls in the range selected
       if ((includedgenre === true) && (yearresult === true) && (ratingresult === true)) {
+        //if all is true then display the movie
         var FilterDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
         $("#movies").append(FilterDiv);
       }
@@ -529,8 +539,8 @@ function LoadFilter() {
   });
 
 
-
 };
 
 
 /* DROPDOWN JAVASCRIP ERIK END */
+//Code was used from Bootstrap for the Carousel
