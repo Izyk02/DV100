@@ -35,7 +35,7 @@ var users = [
   }
 ]
 //This array will store all 25 movies when the API calls them
-var moviesArray = [25];
+var moviesArray = [];
 var localWatchlist = [];
 var count = 0;
 
@@ -61,9 +61,9 @@ function loadMovieContent() {
 
     $.ajax(settings).done(function (response) {
       //These Temporary variables store the movie information
-      console.log(response);
+     // console.log(response);
       var dir = response.Director;
-      
+
       var name = response.Title;
       var act = response.Actors;
       var img = response.Poster;
@@ -86,6 +86,8 @@ function loadMovieContent() {
         genre: gen
       }
       //Here the temporary onj is sent to be added to the movie array
+      console.log("jcbjw");
+     console.log(tempObj);
       moviesArray.push(tempObj);
 
       //console.log(moviesArray[i]);
@@ -98,24 +100,24 @@ function loadMovieContent() {
   //saving the info, so this time function waits 5 seconds before loading the info into the array to make sure
   //the info is there and that the API has had enough time to call it before we try and save it.
   setTimeout(function () { var jsonArr = JSON.stringify(moviesArray); localStorage.setItem("mArray", jsonArr); }, 5000);
-
+//console.log(moviesArray);
   // var str = localStorage.getItem("mArray");
   //var parsedArr = JSON.parse(str);
 
 
 
 
-count++;
 
 }
 
 function loadOnHome() {
-
-  $('.carousel').carousel({
-    interval: 2000
-  })
-
   loadMovieContent();
+
+  /*$('.carousel').carousel({
+    interval: 2000
+  })*/
+
+
 
 
 
