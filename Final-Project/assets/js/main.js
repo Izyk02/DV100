@@ -5,7 +5,7 @@
 //They are sourced from IMDB
  616eae0379b3813cf7f93ebb40e44a1c355e00db*/
 
-var moviesListed = ["tt0107290", "tt0816692", "tt0245429", "tt0068646", "tt0424774", "tt0076759", "tt0114709", "tt1877830", "tt0800369", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
+var moviesListed = ["tt0107290", "tt3336368", "tt0245429", "tt0068646", "tt0424774", "tt0952640", "tt0114709", "tt1877830", "tt0371746", "tt0117060", "tt0974015", "tt1490017", "tt2953050", "tt1375670", "tt1517451", "tt6751668", "tt0499549", "tt0325980", "tt0241527", "tt2488496", "tt0077651", "tt4154796", "tt1745960", "tt4633694", "tt2865120"];
 //This users array stores the list of watchlist movies as well as login info
 var users = [
   {
@@ -36,8 +36,13 @@ var users = [
 ]
 //This array will store all 25 movies when the API calls them
 var moviesArray = [];
+<<<<<<< HEAD
 var localWatchlist = [];
 var count = 0;
+=======
+
+
+>>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
 function loadMovieContent() {
   //This function is called in order to retrieve the  25 movies then save them using JSON into the Local Storage
@@ -109,9 +114,9 @@ function loadMovieContent() {
 
 
 }
-
 function loadOnHome() {
   loadMovieContent();
+<<<<<<< HEAD
 
   /*$('.carousel').carousel({
     interval: 2000
@@ -160,6 +165,16 @@ function prev_slide() {
 function next_slide() {
   $('.carousel').carousel('next')
 }
+=======
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
+  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
+
+  $('.carousel').carousel(cycle)({
+    interval: 2000
+  })
+}
+
+>>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
 
 
@@ -287,6 +302,13 @@ function addMoviesToLibrary(t) {
 }
 
 function addToWatchlist() {
+<<<<<<< HEAD
+=======
+  var tempName = sessionStorage.getItem("sName");
+  var movieToAdd = sessionStorage.getItem("selectedMovie");
+  var pos;
+  console.log(tempName);
+>>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
   //This function adds the movie selected to a watchlist stored on the loacl storage for the user
 
