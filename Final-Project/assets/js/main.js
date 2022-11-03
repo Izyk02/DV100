@@ -36,13 +36,8 @@ var users = [
 ]
 //This array will store all 25 movies when the API calls them
 var moviesArray = [];
-<<<<<<< HEAD
 var localWatchlist = [];
 var count = 0;
-=======
-
-
->>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
 function loadMovieContent() {
   //This function is called in order to retrieve the  25 movies then save them using JSON into the Local Storage
@@ -116,7 +111,6 @@ function loadMovieContent() {
 }
 function loadOnHome() {
   loadMovieContent();
-<<<<<<< HEAD
 
   /*$('.carousel').carousel({
     interval: 2000
@@ -165,16 +159,6 @@ function prev_slide() {
 function next_slide() {
   $('.carousel').carousel('next')
 }
-=======
-  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(-1);
-  document.querySelectorAll(".carousel-control-prev").onclick = () => plusSlide(1);
-
-  $('.carousel').carousel(cycle)({
-    interval: 2000
-  })
-}
-
->>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
 
 
@@ -302,13 +286,6 @@ function addMoviesToLibrary(t) {
 }
 
 function addToWatchlist() {
-<<<<<<< HEAD
-=======
-  var tempName = sessionStorage.getItem("sName");
-  var movieToAdd = sessionStorage.getItem("selectedMovie");
-  var pos;
-  console.log(tempName);
->>>>>>> parent of 6d63666 (Merge branch 'main' of https://github.com/Izyk02/DV100)
 
   //This function adds the movie selected to a watchlist stored on the loacl storage for the user
 
