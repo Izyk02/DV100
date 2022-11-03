@@ -120,11 +120,6 @@ function loadOnHome() {
   })
 
 
-
-
-
-  var jsonWatchlistArr = JSON.stringify(localWatchlist);
-  localStorage.setItem("wArray", jsonWatchlistArr);
   $(".signIn-welcomeText").append("<h4 id='signIn-welcomeTextStyle'> Welcome back, " + sessionStorage.getItem("sName") + "! We hope you are having an awesome day!</h4>");
 
 
@@ -136,15 +131,15 @@ function loadOnHome() {
   moviesArray = parsedArr;
   console.log(moviesArray);
   for (let x = 0; x < 4; x++) {
-    var addFeature = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col-sm-3\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addFeature = "<div onmouseenter=\"addMoviesToLibraryS(" + x + ")\" class=\"col-sm-3\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#featured_movies_add").append(addFeature);
     //top rated movies
   }
 
   for (let x = 4; x < 8; x++) {
 
-    var addToprated = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col-sm-3\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
-    $("#top_rated_movies_add").append(addToprated);
+    var addTopRated = "<div onmouseenter=\"addMoviesToLibraryS(" + x + ")\" class=\"col-sm-3\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    $("#top_rated_movies_add").append(addTopRated);
   }
   //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
 
@@ -369,7 +364,7 @@ function showMovies() {
   //var addDiv = "<div onclick=\"addMoviesToLibrary(x)\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
 
   for (let x = 0; x < moviesArray.length; x++) {
-    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addDiv = "<div onmouseenter=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#movies").append(addDiv);
   }
 }
@@ -390,7 +385,7 @@ function loadWatchlist() {
 
 
 
-    var addDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[mviePos].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[mviePos].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+    var addDiv = "<div onmouseenter=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
     $("#watchlist-content").append(addDiv);
   }
   /*
@@ -550,7 +545,7 @@ function LoadFilter() {
       //Checks to see if the rating in moviesArray.rating falls in the range selected
       if ((includedgenre === true) && (yearresult === true) && (ratingresult === true)) {
         //if all is true then display the movie
-        var FilterDiv = "<div onclick=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div id=\"library-btnPlay1\"><a href='#' class='btn btn-primary'>Play</a></div><div id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
+        var FilterDiv = "<div onmouseenter=\"addMoviesToLibraryS(" + x + ")\" class=\"col\"> <div class=\"movie-card\">  <div id=\"library-image1\"> <img src=" + moviesArray[x].poster + " class='card-img-top' alt'...'></div>     <div class=\"card-body\"> <div id=\"library-title1\"><h5 class='card-title'> <a href='Detailed_Page.html'>" + moviesArray[x].movieName + " </a></h5></div> <div  id=\"library-btnPlay1\"><a href='Detailed_Page.html' class='btn btn-primary'>Play</a></div><div onclick  = 'addToWatchlist()' id=\"library-btnAdd1\"> <a href='#' class='btn btn-primary'>Add</a></div>  </div>     </div> </div>";
         $("#movies").append(FilterDiv);
       }
 
