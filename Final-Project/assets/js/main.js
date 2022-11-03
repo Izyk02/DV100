@@ -41,6 +41,8 @@ var count = 0;
 
 function loadMovieContent() {
   //This function is called in order to retrieve the  25 movies then save them using JSON into the Local Storage
+  var moviesArray = [];
+
 
 
   //The for loop loops through the tt codes and substitutes them in the API to retrieve the info
@@ -88,7 +90,6 @@ function loadMovieContent() {
       //Here the temporary onj is sent to be added to the movie array
      // console.log(tempObj);
       moviesArray.push(tempObj);
-      console.log(moviesArray);
 
       //console.log(moviesArray[i]);
 
@@ -99,8 +100,10 @@ function loadMovieContent() {
   //This peace of code was added because the API we use lags a bit and that causes the code to not read it before 
   //saving the info, so this time function waits 5 seconds before loading the info into the array to make sure
   //the info is there and that the API has had enough time to call it before we try and save it.
+  jsonArr = [] ;
   setTimeout(function () { var jsonArr = JSON.stringify(moviesArray); localStorage.setItem("mArray", jsonArr); }, 5000);
-//console.log(moviesArray);
+
+  //console.log(moviesArray);
   // var str = localStorage.getItem("mArray");
   //var parsedArr = JSON.parse(str);
 
@@ -530,7 +533,7 @@ function LoadFilter() {
     var str = localStorage.getItem("mArray");
 
     var parsedArr = JSON.parse(str);
-    //console.log(parsedArr);
+
     moviesArray = parsedArr;
 
     for (let x = 0; x < moviesArray.length; x++) {
